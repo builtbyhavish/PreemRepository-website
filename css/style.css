@@ -440,6 +440,101 @@ section.container {
     /* Increased spacing as requested */
 }
 
+/* Contact Section */
+.contact {
+    padding: var(--section-padding) var(--space-4);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-form {
+    background: var(--color-surface);
+    padding: 48px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 16px 20px;
+    background: var(--color-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.btn-cta {
+    width: 100%;
+    padding: 18px 32px;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-cta:hover {
+    background: #ffed4e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+}
+
+.success-message, .error-message {
+    display: none;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success-message {
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    color: #00ff00;
+}
+
+.error-message {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: #ff4444;
+}
+
 /* Footer */
 footer {
     padding: var(--space-8) 0;
