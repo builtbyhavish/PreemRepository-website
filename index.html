@@ -115,7 +115,44 @@
                 <a href="#contact" class="btn-xl">GO PREEM</a>
             </div>
         </section>
-    </main>
+        <!--<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>Ready to elevate your brand? Let's talk.</p>
+    </div>
+    
+    <form class="contact-form" id="contactForm">
+        <div class="success-message" id="successMessage">
+            Thank you! Your message has been sent successfully.
+        </div>
+        <div class="error-message" id="errorMessage">
+            Oops! Something went wrong. Please try again.
+        </div>
+        
+        <input type="hidden" name="access_key" value="2630f77f-b74b-485e-8959-ca16c2bb54c2">
+        <input type="hidden" name="subject" value="New Contact Form Submission">
+        <input type="hidden" name="redirect" value="">
+        
+        <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        
+        <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+        </div>
+        
+        <div class="form-group">
+            <input type="text" id="company" name="company" placeholder="Company Name">
+        </div>
+        
+        <div class="form-group">
+            <textarea id="message" name="message" placeholder="Tell us about your project" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn-cta">Send Message</button>
+    </form>
+</section>
 
     <footer>
         <div class="container footer-content">
@@ -124,6 +161,47 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        const form = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    successMessage.style.display = 'block';
+                    form.reset();
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                } else {
+                    errorMessage.style.display = 'block';
+                }
+            } catch (error) {
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
 </body>
 
 </html>
