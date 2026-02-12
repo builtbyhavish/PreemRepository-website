@@ -1,0 +1,8 @@
+{
+    "name": "PREEM",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "parcel index.html",
+        "build": "GENERATE_SOURCEMAP=false parcel build index.html--dist-dir dist --no--scope-hoist"
+    }
+}
