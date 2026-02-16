@@ -109,7 +109,7 @@
             </div>
         </footer>
         <script src="script.js"></script>
-        <script>!function () { var e = document.getElementById("contactForm"), t = document.getElementById("successMessage"), s = document.getElementById("errorMessage"); e.addEventListener("submit", async function (n) { n.preventDefault(); var r = new FormData(e), a = Object.fromEntries(r), o = JSON.stringify(a); t.style.display = "none", s.style.display = "none"; try { var c = await fetch("https://api.web3forms.com/submit", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: o }), i = await c.json(); i.success ? (t.style.display = "block", e.reset(), setTimeout(() => { t.style.display = "none" }, 5e3)) : s.style.display = "block" } catch (e) { s.style.display = "block" } }) }();</script>
+        <script>!function () { var form = document.getElementById("contactForm"), successMessage = document.getElementById("successMessage"), errorMessage = document.getElementById("errorMessage"); form.addEventListener("submit", async function (e) { e.preventDefault(); var formData = new FormData(form), object = Object.fromEntries(formData), json = JSON.stringify(object); successMessage.style.display = "none", errorMessage.style.display = "none"; try { var response = await fetch("https://api.web3forms.com/submit", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: json }), result = await response.json(); result.success ? (successMessage.style.display = "block", form.reset(), setTimeout(() => { successMessage.style.display = "none" }, 5e3)) : errorMessage.style.display = "block" } catch (error) { errorMessage.style.display = "block" } }) }();</script>
 </body>
 
 </html>
