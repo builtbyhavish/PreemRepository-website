@@ -6,10 +6,8 @@
     --color-accent: #FFD700;
     --color-text: #ffffff;
     --color-text-muted: #a0a0a0;
-
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
-
     --space-8: 64px;
     --space-10: 80px;
     --space-12: 96px;
@@ -17,13 +15,13 @@
     --space-20: 160px;
     --section-padding: var(--space-20);
     --container-padding: var(--space-4);
-    --card-padding: var(--space-4);
+    --card-padding: var(--space-4)
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 body {
@@ -31,7 +29,7 @@ body {
     color: var(--color-text);
     font-family: var(--font-body);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden
 }
 
 h1,
@@ -39,29 +37,29 @@ h2,
 h3 {
     font-family: var(--font-heading);
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.1
 }
 
 h1 {
     font-size: clamp(2rem, 8vw, 4.5rem);
     text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: -2px
 }
 
 h2 {
     font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: var(--space-2);
+    margin-bottom: var(--space-2)
 }
 
 h3 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem
 }
 
 p {
     font-size: 1.125rem;
     color: var(--color-text-muted);
-    max-width: 65ch;
+    max-width: 65ch
 }
 
 .text-accent {
@@ -69,17 +67,17 @@ p {
     background: var(--color-bg);
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease
 }
 
 .text-accent:hover {
-    color: #FFD700;
+    color: #FFD700
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--container-padding);
+    padding: 0 var(--container-padding)
 }
 
 .section-label {
@@ -89,7 +87,7 @@ p {
     font-size: 0.875rem;
     letter-spacing: 2px;
     margin-bottom: var(--space-2);
-    display: block;
+    display: block
 }
 
 .main-header {
@@ -103,11 +101,11 @@ p {
     z-index: 100;
     background: rgba(11, 11, 11, 0.8);
     backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease
 }
 
 .main-header:hover {
-    color: #FFD700;
+    color: #FFD700
 }
 
 .logo {
@@ -115,7 +113,7 @@ p {
     font-weight: 900;
     font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.5px
 }
 
 .btn-cta.premium-btn {
@@ -125,13 +123,13 @@ p {
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
     position: relative;
     overflow: hidden;
-    z-index: 1;
+    z-index: 1
 }
 
 .btn-cta.premium-btn:hover {
     color: var(--color-bg);
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-    transform: translateY(-2px);
+    transform: translateY(-2px)
 }
 
 .btn-xl {
@@ -147,21 +145,20 @@ p {
     margin-top: var(--spacing-md);
     transition: all 0.3s ease;
     border: 2px solid var(--color-accent);
-    border-radius: 99px;
+    border-radius: 99px
 }
 
 .btn-xl:hover {
     transform: scale(1.05);
     box-shadow: 0 0 50px rgba(255, 215, 0, 0.6);
     background: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-bg)
 }
 
 .how-we-work .split-content,
 .how-we-work .split-text {
-    margin-top: 3rem;
+    margin-top: 3rem
 }
-
 
 .hero {
     height: 90vh;
@@ -170,16 +167,16 @@ p {
     justify-content: center;
     text-align: center;
     padding: var(--space-4);
-    margin-bottom: 3rem;
+    margin-bottom: 3rem
 }
 
 section {
     padding: var(--section-padding) 0;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem
 }
 
 section.container {
-    padding: var(--section-padding) var(--container-padding);
+    padding: var(--section-padding) var(--container-padding)
 }
 
 .neutral-card {
@@ -191,64 +188,63 @@ section.container {
     display: flex;
     align-items: center;
     backdrop-filter: blur(12px);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2)
 }
 
 .text-right {
-    text-align: right;
+    text-align: right
 }
 
 .split-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: var(--space-8);
+    gap: var(--space-8)
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .split-layout {
         grid-template-columns: 1fr;
-        gap: var(--space-4);
+        gap: var(--space-4)
     }
 }
 
 .split-text {
-    border-left: none;
+    border-left: none
 }
 
 .split-text p {
     font-size: 1.25rem;
-    color: var(--color-text);
+    color: var(--color-text)
 }
 
 .centered-layout {
-    background: linear-gradient(180deg, var(--color-bg) 0%, #111 50%, var(--color-bg) 100%);
+    background: linear-gradient(180deg, var(--color-bg) 0%, #111 50%, var(--color-bg) 100%)
 }
 
 .content-wrapper-narrow {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
+    text-align: center
 }
 
 .text-center {
-    text-align: center;
+    text-align: center
 }
 
 .intention-box {
-    margin-top: var(--space-4);
+    margin-top: var(--space-4)
 }
 
 .services .section-header h2 {
-    margin-top: 3rem;
-
+    margin-top: 3rem
 }
 
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-md);
-    margin-top: var(--spacing-lg);
+    margin-top: var(--spacing-lg)
 }
 
 .holo-card {
@@ -258,13 +254,13 @@ section.container {
     border-radius: 8px;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease
 }
 
 .holo-card:hover {
     transform: translateY(-5px);
     border-color: var(--color-accent);
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1)
 }
 
 .holo-card::before {
@@ -277,11 +273,11 @@ section.container {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
     opacity: 0;
     transition: opacity 0.3s;
-    pointer-events: none;
+    pointer-events: none
 }
 
 .holo-card:hover::before {
-    opacity: 1;
+    opacity: 1
 }
 
 .services-deck {
@@ -289,14 +285,14 @@ section.container {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin-top: var(--space-8);
-    perspective: 1000px;
+    perspective: 1000px
 }
 
 .card-stack {
     position: relative;
     height: 320px;
     transform-style: preserve-3d;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .card-layer {
@@ -312,7 +308,7 @@ section.container {
     justify-content: center;
     transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
     backface-visibility: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1)
 }
 
 .title-card {
@@ -320,20 +316,20 @@ section.container {
     z-index: 2;
     align-items: center;
     text-align: center;
-    transform: translateZ(0);
+    transform: translateZ(0)
 }
 
 .title-card h3 {
     font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1px
 }
 
 .indicator {
     margin-top: var(--space-2);
     font-size: 2rem;
     color: var(--color-accent);
-    transition: transform 0.3s;
+    transition: transform 0.3s
 }
 
 .feature-card {
@@ -344,14 +340,14 @@ section.container {
     opacity: 0;
     text-align: center;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .feature-card.image-card {
     background: transparent;
     border: none;
     padding: 0 !important;
-    margin: 0 !important;
+    margin: 0 !important
 }
 
 .feature-img {
@@ -363,33 +359,33 @@ section.container {
     object-position: center;
     display: block;
     border-radius: inherit;
-    backface-visibility: hidden;
+    backface-visibility: hidden
 }
 
 .card-4-container .feature-img {
-    object-position: top center !important;
+    object-position: top center !important
 }
 
 .feature-card p {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--color-bg);
+    color: var(--color-bg)
 }
 
 .card-stack:hover .title-card {
     opacity: 0;
     transform: translateY(-20px) scale(0.9);
-    pointer-events: none;
+    pointer-events: none
 }
 
 .card-stack:hover .feature-card {
     opacity: 1;
     transform: translateZ(0) translateY(0) scale(1);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5)
 }
 
 .card-stack:hover .indicator {
-    transform: rotate(45deg);
+    transform: rotate(45deg)
 }
 
 .final-cta {
@@ -397,18 +393,18 @@ section.container {
     margin-bottom: 0;
     background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a1a1a' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     text-align: center;
-    border-top: 1px solid var(--color-surface);
+    border-top: 1px solid var(--color-surface)
 }
 
 .final-cta h2 {
     font-size: clamp(3rem, 8vw, 6rem);
-    margin-bottom: 3rem;
+    margin-bottom: 3rem
 }
 
 .contact {
     padding: 3rem var(--space-4);
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .section-header {
@@ -417,20 +413,22 @@ section.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .section-header h2 {
     margin: 0 auto 12px auto;
     width: 100%;
     font-size: 2.5rem;
+    padding-left: 20px;
+    padding-right: 20px
 }
 
 .section-header p {
     margin: 0 auto;
     width: 100%;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.25rem
 }
 
 .contact-form {
@@ -438,18 +436,18 @@ section.container {
     padding: 32px;
     border-radius: 12px;
     border: 1px solid rgba(255, 215, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease
 }
 
 .contact-form:hover {
     background: var(--color-surface);
     border-color: rgba(255, 215, 0, 0.4);
     box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
-    transform: translateY(-5px);
+    transform: translateY(-5px)
 }
 
 .form-group {
-    margin-bottom: 18px;
+    margin-bottom: 18px
 }
 
 .form-group input,
@@ -462,24 +460,24 @@ section.container {
     color: var(--color-text);
     font-family: var(--font-body);
     font-size: 0.95rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1)
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: var(--color-text-muted);
+    color: var(--color-text-muted)
 }
 
 .form-group textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 100px
 }
 
 .btn-cta {
@@ -496,13 +494,13 @@ section.container {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-decoration: none;
+    text-decoration: none
 }
 
 .btn-cta:hover {
     background: #ffed4e;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3)
 }
 
 .success-message,
@@ -511,64 +509,64 @@ section.container {
     padding: 16px;
     border-radius: 8px;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: center
 }
 
 .success-message {
     background: rgba(0, 255, 0, 0.1);
     border: 1px solid rgba(0, 255, 0, 0.3);
-    color: #00ff00;
+    color: #00ff00
 }
 
 .error-message {
     background: rgba(255, 0, 0, 0.1);
     border: 1px solid rgba(255, 0, 0, 0.3);
-    color: #ff4444;
+    color: #ff4444
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0;
+        opacity: 0
     }
 
     to {
-        opacity: 1;
+        opacity: 1
     }
 }
 
 @keyframes slideInLeft {
     from {
         opacity: 0;
-        transform: translateX(-60px);
+        transform: translateX(-60px)
     }
 
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0)
     }
 }
 
 @keyframes slideInRight {
     from {
         opacity: 0;
-        transform: translateX(60px);
+        transform: translateX(60px)
     }
 
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0)
     }
 }
 
 @keyframes scaleIn {
     from {
         opacity: 0;
-        transform: scale(0.9);
+        transform: scale(0.9)
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1)
     }
 }
 
@@ -576,11 +574,11 @@ section.container {
 
     0%,
     100% {
-        opacity: 1;
+        opacity: 1
     }
 
     50% {
-        opacity: 0.7;
+        opacity: 0.7
     }
 }
 
@@ -588,18 +586,18 @@ section.container {
 
     0%,
     100% {
-        box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.3)
     }
 
     50% {
-        box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.6)
     }
 }
 
 @keyframes ripple {
     to {
         transform: scale(4);
-        opacity: 0;
+        opacity: 0
     }
 }
 
@@ -607,57 +605,57 @@ section.container {
 
     0%,
     100% {
-        transform: translateY(0px);
+        transform: translateY(0px)
     }
 
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-10px)
     }
 }
 
 .hero {
-    animation: fadeIn 0.8s ease-out;
+    animation: fadeIn 0.8s ease-out
 }
 
 .who-are-we {
-    animation: slideInLeft 0.8s ease-out;
+    animation: slideInLeft 0.8s ease-out
 }
 
 .how-we-work {
-    animation: slideInRight 0.8s ease-out;
+    animation: slideInRight 0.8s ease-out
 }
 
 .services {
-    animation: fadeIn 0.8s ease-out;
+    animation: fadeIn 0.8s ease-out
 }
 
 .card-stack {
-    animation: scaleIn 0.6s ease-out;
+    animation: scaleIn 0.6s ease-out
 }
 
 .final-cta {
-    animation: fadeIn 0.8s ease-out;
+    animation: fadeIn 0.8s ease-out
 }
 
 .card-stack:nth-child(1) {
-    animation-delay: 0s;
+    animation-delay: 0s
 }
 
 .card-stack:nth-child(2) {
-    animation-delay: 0.1s;
+    animation-delay: 0.1s
 }
 
 .card-stack:nth-child(3) {
-    animation-delay: 0.2s;
+    animation-delay: 0.2s
 }
 
 .card-stack:nth-child(4) {
-    animation-delay: 0.3s;
+    animation-delay: 0.3s
 }
 
 .btn-cta {
     position: relative;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .btn-cta::before {
@@ -670,45 +668,45 @@ section.container {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.3);
     transform: translate(-50%, -50%);
-    pointer-events: none;
+    pointer-events: none
 }
 
 .btn-cta:active::before {
-    animation: ripple 0.6s ease-out;
+    animation: ripple 0.6s ease-out
 }
 
 .btn-xl:hover {
-    animation: glow 1.5s ease-in-out infinite;
+    animation: glow 1.5s ease-in-out infinite
 }
 
 .card-stack:hover {
     transform: translateY(-8px);
-    animation: glow 1.5s ease-in-out infinite;
+    animation: glow 1.5s ease-in-out infinite
 }
 
 .form-group input,
 .form-group textarea {
     transition: all 0.3s ease;
-    border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+    border-bottom: 2px solid rgba(255, 215, 0, 0.3)
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     border-bottom: 2px solid var(--color-accent);
     box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
-    transform: scale(1.02);
+    transform: scale(1.02)
 }
 
 a {
-    transition: all 0.3s ease;
+    transition: all 0.3s ease
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth
 }
 
 section.fade-in-scroll {
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.6s ease-out forwards
 }
 
 footer {
@@ -717,12 +715,81 @@ footer {
     text-align: right;
     font-size: 0.75rem;
     color: var(--color-text-muted);
-    background: transparent;
+    background: transparent
 }
 
 .footer-content {
     width: 33.33%;
     margin-left: auto;
     margin-right: var(--space-5);
-    padding: 0;
+    padding: 0
+}
+
+@media (max-width:1024px) {
+    .services-deck {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem
+    }
+}
+
+@media (max-width:768px) {
+    :root {
+        --section-padding: 80px;
+        --space-20: 80px;
+        --space-16: 64px;
+        --space-12: 48px;
+        --space-10: 40px;
+        --space-8: 32px
+    }
+
+    .main-header {
+        padding: 1rem
+    }
+
+    .hero {
+        height: auto;
+        min-height: 500px;
+        padding-top: 100px
+    }
+
+    .split-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center
+    }
+
+    .how-we-work .split-text,
+    .how-we-work .split-content {
+        margin-top: 0;
+        text-align: center
+    }
+
+    .how-we-work .split-layout {
+        display: flex;
+        flex-direction: column-reverse
+    }
+
+    .text-right {
+        text-align: center
+    }
+
+    .services-deck {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .contact {
+        padding: 2rem 1rem;
+        width: 100%;
+        max-width: 100%
+    }
+
+    .footer-content {
+        width: 100%;
+        text-align: center;
+        margin-right: 0
+    }
 }
