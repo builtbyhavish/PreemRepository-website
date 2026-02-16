@@ -119,7 +119,12 @@
 
                 const formData = new FormData(form);
                 const object = Object.fromEntries(formData);
+                if (object.redirect === "") {
+                    delete object.redirect;
+                }
+
                 const json = JSON.stringify(object);
+                console.log("Sending payload:", json);
 
                 successMessage.style.display = 'none';
                 errorMessage.style.display = 'none';
@@ -145,6 +150,7 @@
                     } else {
                         console.error("Web3Forms Error:", result);
                         errorMessage.style.display = 'block';
+                        errorMessage.innerText = "Error: " + (result.message || "Something went wrong");
                     }
                 } catch (error) {
                     console.error("Fetch Error:", error);
