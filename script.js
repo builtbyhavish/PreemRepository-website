@@ -1,1 +1,104 @@
-!function () { var e = 0, t = document.querySelector(".main-header"); window.addEventListener("scroll", function () { var n = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100, r = document.querySelectorAll(".main-header"); if (n >= 6) { r.forEach(e => { e.style.color = "#FFD700" }) } else { s.forEach(e => { e.style.color = "white" }) } var s = document.querySelectorAll(".text-accent"); if (n >= 6) { s.forEach(e => { e.style.color = "#FFD700" }) } else { s.forEach(e => { e.style.color = "white" }) } var i = document.querySelectorAll(".text-accent1"); if (n >= 15) { i.forEach(e => { e.style.color = "#FFD700" }) } else { i.forEach(e => { e.style.color = "white" }) } var c = document.querySelectorAll(".text-accent2"); if (n >= 25) { c.forEach(e => { e.style.color = "#FFD700" }) } else { c.forEach(e => { e.style.color = "white" }) } var o = document.querySelectorAll(".text-accent3"); if (n >= 30) { o.forEach(e => { e.style.color = "#FFD700" }) } else { o.forEach(e => { e.style.color = "white" }) } }); var n = { threshold: .1, rootMargin: "0px 0px -100px 0px" }, r = new IntersectionObserver(function (e) { e.forEach(e => { if (e.isIntersecting) { e.target.classList.add("fade-in-scroll"); r.unobserve(e.target) } }) }, n); document.querySelectorAll("section").forEach(e => { r.observe(e) }); document.querySelectorAll(".btn-cta, .btn-xl").forEach(e => { e.addEventListener("click", function (e) { var t = document.createElement("span"), n = this.getBoundingClientRect(), r = Math.max(n.width, n.height), s = e.clientX - n.left - r / 2, i = e.clientY - n.top - r / 2; t.style.width = t.style.height = r + "px"; t.style.left = s + "px"; t.style.top = i + "px"; this.appendChild(t); setTimeout(() => t.remove(), 600) }) }); document.querySelectorAll(".form-group input, .form-group textarea").forEach(e => { e.addEventListener("focus", function () { this.style.transition = "all 0.3s ease" }); e.addEventListener("blur", function () { if (!this.value) { this.style.boxShadow = "none" } }) }); window.addEventListener("scroll", function () { var n = window.pageYOffset || document.documentElement.scrollTop; if (n > 100) { t.style.background = "rgba(11, 11, 11, 0.95)"; t.style.backdropFilter = "blur(15px)" } else { t.style.background = "rgba(11, 11, 11, 0.8)"; t.style.backdropFilter = "blur(10px)" } e = n <= 0 ? 0 : n }); document.querySelectorAll(".card-stack").forEach(e => { e.addEventListener("mousemove", function (e) { var t = this.getBoundingClientRect(), n = e.clientX - t.left, r = e.clientY - t.top, s = t.width / 2, i = t.height / 2, c = (r - i) / 10, o = (s - n) / 10; this.style.transform = `perspective(1000px) rotateX(${c}deg) rotateY(${o}deg) translateY(-8px)` }); e.addEventListener("mouseleave", function () { this.style.transform = "perspective(1000px) rotateX(0) rotateY(0) translateY(0)" }) }); var s = document.querySelectorAll("img"), i = new IntersectionObserver(e => { e.forEach(e => { if (e.isIntersecting) { e.target.style.animation = "fadeIn 0.6s ease-out"; i.unobserve(e.target) } }) }, { threshold: .1 }); s.forEach(e => i.observe(e)) }();
+!function () {
+  var lastScroll = 0;
+  var header = document.querySelector(".main-header");
+
+  window.addEventListener("scroll", function () {
+    var pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+    var headers = document.querySelectorAll(".main-header");
+    if (pct >= 6) {
+      headers.forEach(function(el) { el.style.color = "#FFD700"; });
+    } else {
+      headers.forEach(function(el) { el.style.color = "white"; });
+    }
+
+    var accent = document.querySelectorAll(".text-accent");
+    if (pct >= 6) {
+      accent.forEach(function(el) { el.style.color = "#FFD700"; });
+    } else {
+      accent.forEach(function(el) { el.style.color = "white"; });
+    }
+
+    var accent1 = document.querySelectorAll(".text-accent1");
+    if (pct >= 15) {
+      accent1.forEach(function(el) { el.style.color = "#FFD700"; });
+    } else {
+      accent1.forEach(function(el) { el.style.color = "white"; });
+    }
+
+    var accent2 = document.querySelectorAll(".text-accent2");
+    if (pct >= 25) {
+      accent2.forEach(function(el) { el.style.color = "#FFD700"; });
+    } else {
+      accent2.forEach(function(el) { el.style.color = "white"; });
+    }
+
+    var accent3 = document.querySelectorAll(".text-accent3");
+    if (pct >= 30) {
+      accent3.forEach(function(el) { el.style.color = "#FFD700"; });
+    } else {
+      accent3.forEach(function(el) { el.style.color = "white"; });
+    }
+
+    var n = window.pageYOffset || document.documentElement.scrollTop;
+    if (n > 100) {
+      header.style.background = "rgba(11, 11, 11, 0.95)";
+      header.style.backdropFilter = "blur(15px)";
+    } else {
+      header.style.background = "rgba(11, 11, 11, 0.8)";
+      header.style.backdropFilter = "blur(10px)";
+    }
+    lastScroll = n <= 0 ? 0 : n;
+  });
+
+  var observerOptions = { threshold: 0.1, rootMargin: "0px 0px -100px 0px" };
+  var sectionObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in-scroll");
+        sectionObserver.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  document.querySelectorAll("section").forEach(function(el) { sectionObserver.observe(el); });
+
+  document.querySelectorAll(".btn-cta, .btn-xl").forEach(function(btn) {
+    btn.addEventListener("click", function (e) {
+      var span = document.createElement("span");
+      var rect = this.getBoundingClientRect();
+      var size = Math.max(rect.width, rect.height);
+      span.style.width = span.style.height = size + "px";
+      span.style.left = (e.clientX - rect.left - size / 2) + "px";
+      span.style.top = (e.clientY - rect.top - size / 2) + "px";
+      this.appendChild(span);
+      setTimeout(function() { span.remove(); }, 600);
+    });
+  });
+
+  document.querySelectorAll(".card-stack").forEach(function(card) {
+    card.addEventListener("mousemove", function (e) {
+      var rect = this.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+      var cx = rect.width / 2;
+      var cy = rect.height / 2;
+      var rotX = (y - cy) / 10;
+      var rotY = (cx - x) / 10;
+      this.style.transform = "perspective(1000px) rotateX(" + rotX + "deg) rotateY(" + rotY + "deg) translateY(-8px)";
+    });
+    card.addEventListener("mouseleave", function () {
+      this.style.transform = "perspective(1000px) rotateX(0) rotateY(0) translateY(0)";
+    });
+  });
+
+  var imgs = document.querySelectorAll("img");
+  var imgObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = "fadeIn 0.6s ease-out";
+        imgObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  imgs.forEach(function(img) { imgObserver.observe(img); });
+}();
