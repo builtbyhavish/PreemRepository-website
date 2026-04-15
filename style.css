@@ -24,6 +24,18 @@
     box-sizing: border-box
 }
 
+.btn-nav {
+  color: var(--color-text);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  margin-right: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.btn-nav:hover {
+  color: var(--color-accent);
+}
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
