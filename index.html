@@ -20,13 +20,20 @@
 </head>
 
 <body>
-  <header class="main-header">
-    <div class="logo">Preem Media</div>
-    <nav>
-      <a href="#about" class="btn-nav">About Us</a>
-      <a href="https://www.linkedin.com/company/preemmedia/" target="_blank" rel="noopener noreferrer" class="btn-cta premium-btn">Let's Connect</a>
-    </nav>
-  </header>
+  <header class="main-header" role="banner">
+  <div class="logo">
+    <a href="/" aria-label="Preem Media home" style="color: inherit; text-decoration: none;">Preem Media</a>
+  </div>
+  <nav aria-label="Primary navigation">
+    <a href="about.html" class="btn-nav">About Us</a>
+    <a href="case-studies.html" class="btn-nav">Blog</a>
+    <a href="blogs.html" class="btn-nav">Case Studies</a>
+    <a href="https://www.linkedin.com/company/preemmedia/" target="_blank" rel="noopener noreferrer" class="btn-cta premium-btn">Let's Connect</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
   <main>
     <section class="hero">
