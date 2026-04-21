@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://preemmedia.com/sitemap.xml
+
+# Block access to any future admin or draft folders
+Disallow: /drafts/
+Disallow: /admin/

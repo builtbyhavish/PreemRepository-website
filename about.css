@@ -1,0 +1,553 @@
+/* ============================================================
+   about.css — Preem Media About Page
+   Layout: Flexbox. No sticky. No splits. Simple stacking.
+   ============================================================ */
+
+
+/* ── Logo & nav ─────────────────────────────────────────── */
+
+.logo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-header nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.btn-nav {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  transition: color 0.25s, background 0.25s;
+  white-space: nowrap;
+}
+
+.btn-nav:hover,
+.btn-nav.active {
+  color: var(--color-accent);
+}
+
+.btn-nav.active {
+  background: rgba(255, 215, 0, 0.06);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+
+/* ── Anchor nav ─────────────────────────────────────────── */
+
+.anchor-nav {
+  position: sticky;
+  top: 64px;
+  z-index: 90;
+  background: rgba(11, 11, 11, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.anchor-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.anchor-nav-inner::-webkit-scrollbar { display: none; }
+
+.anchor-link {
+  display: block;
+  padding: 0.85rem 0;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.25s, border-color 0.25s;
+}
+
+.anchor-link:hover,
+.anchor-link.active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+
+/* ── Hero ───────────────────────────────────────────────── */
+
+.about-hero {
+  padding: 160px 2rem 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 0%,
+    rgba(255, 215, 0, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.about-hero-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.about-hero h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+
+.about-hero-sub {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  margin: 0 auto;
+}
+
+
+/* ── Shared section ─────────────────────────────────────── */
+
+.about-section {
+  padding: 80px 0;
+}
+
+.about-section--dark {
+  background: #0f0f0f;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* eyebrow label above every heading */
+.section-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  opacity: 0.8;
+  margin-bottom: 1.25rem;
+}
+
+/* shared h2 for sections 1 and 2 */
+.section-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 1.5rem;
+}
+
+/* body paragraphs under headings */
+.section-intro {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  max-width: 72ch;
+  margin-bottom: 1.1rem;
+}
+
+.section-intro strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+
+/* ── Blockquote ─────────────────────────────────────────── */
+
+.about-quote {
+  border-left: 2px solid var(--color-accent);
+  margin: 1.5rem 0 0;
+  padding: 0.9rem 1.25rem;
+  background: rgba(255, 215, 0, 0.03);
+  border-radius: 0 8px 8px 0;
+  max-width: 72ch;
+}
+
+.about-quote p {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-text);
+  font-style: italic;
+  margin: 0;
+}
+
+
+/* ── Our Story — text left, image right ────────────────── */
+
+.story-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-top: 0;
+}
+
+.story-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.story-image {
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.story-img {
+  width: 100%;
+  aspect-ratio: 6 / 7;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 215, 0, 0.12);
+  background: rgba(255, 215, 0, 0.04); /* placeholder tint while no image */
+  display: block;
+}
+
+.story-img-caption {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  opacity: 0.5;
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+  max-width: none;
+}
+
+
+/* ── Pillar cards — one row, equal width ────────────────── */
+/*
+   4 cards side by side, equal gap on all sides.
+   flex: 1 1 0 means every card grows equally from zero —
+   no card is wider than another regardless of content.
+   On tablet: 2 per row. On mobile: 1 per row.
+*/
+
+.pillars-grid {
+  display: flex;
+  flex-wrap: nowrap;        /* force single row on desktop */
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.pillar-card {
+  flex: 1 1 0;              /* equal width, grows from zero */
+  min-width: 0;             /* prevent content blowout */
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.pillar-card:hover {
+  border-color: rgba(255, 215, 0, 0.3);
+  background: rgba(255, 215, 0, 0.04);
+}
+
+.pillar-icon {
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  margin-bottom: 0.6rem;
+  line-height: 1;
+}
+
+.pillar-card h3 {
+  font-size: 0.85rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.pillar-card p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+
+/* ── Founder — image left, content right ────────────────── */
+
+.founder-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+  max-width: 900px;       /* cap width so it never stretches full container */
+  margin: 0 auto;         /* centre the whole block with equal space left & right */
+}
+
+/* Left column: fixed width, centred avatar in glow */
+.founder-visual {
+  flex: 0 0 260px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The glowing circle behind the avatar */
+.founder-glow {
+  position: absolute;
+  width: 300px;
+  height: 360px;
+  border-radius: 16px;
+  background: radial-gradient(ellipse at center,
+    rgba(255, 215, 0, 0.12) 0%,
+    rgba(255, 215, 0, 0.04) 55%,
+    transparent 75%);
+}
+
+.founder-avatar {
+  position: relative;
+  width: 260px;
+  height: 320px;             /* taller than wide — shows more of the illustration */
+  border-radius: 16px;       /* soft rounded rect, not circle — suits full-body art */
+  border: none;              /* black bg on image blends seamlessly — no border needed */
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  z-index: 1;
+}
+
+/* Right column: text content */
+.founder-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.founder-greeting {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.founder-content h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+}
+
+.founder-role {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.founder-bio {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  max-width: 58ch;
+}
+
+.founder-bio strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.founder-bio-logo {
+  color: #ffd700;
+  font-weight:900; 
+}
+
+.founder-actions {
+  margin-top: 1.75rem;
+}
+
+.founder-cta {
+  display: inline-block;
+  width: auto;
+  padding: 0.85rem 2rem;
+}
+
+
+/* ── Text accent colours ────────────────────────────────── */
+
+.text-accent1 { color: white; transition: color 0.3s; }
+.text-accent2 { color: white; transition: color 0.3s; }
+.text-accent3 { color: white; transition: color 0.3s; }
+
+
+/* ── CTA section ────────────────────────────────────────── */
+
+.about-cta h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 2.5rem;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE
+   900px → tablet: cards wrap to 2 per row
+   600px → mobile: cards 1 per row, hero shrinks
+   ══════════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+
+  .story-layout {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .story-image {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .pillars-grid {
+    flex-wrap: wrap;
+  }
+
+  .pillar-card {
+    flex: 1 1 calc(50% - 0.5rem);  /* 2 per row on tablet */
+  }
+
+  .founder-layout {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .founder-visual {
+    flex: none;
+  }
+
+  .founder-bio {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .founder-actions {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .about-hero {
+    padding: 110px 1.25rem 60px;
+  }
+
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .anchor-nav-inner {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .pillar-card {
+    flex: 1 1 100%;           /* 1 per row on mobile */
+  }
+
+  /* Founder stacks vertically on mobile */
+  .founder-layout {
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .founder-visual {
+    flex: none;
+  }
+
+  .founder-bio {
+    max-width: 100%;
+  }
+
+  .founder-actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Mobile nav drawer */
+  .main-header nav {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.25rem 1.5rem 1.5rem;
+    background: rgba(11, 11, 11, 0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 99;
+  }
+
+  .main-header nav.nav-open {
+    display: flex;
+  }
+
+  .btn-nav {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .btn-cta.premium-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}
