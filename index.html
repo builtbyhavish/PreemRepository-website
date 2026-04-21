@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKGEFWFY4V"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -9,120 +10,263 @@
     gtag('js', new Date());
     gtag('config', 'G-SKGEFWFY4V');
   </script>
+
+  <!-- ═══════════════════════════════════════
+       CORE META
+  ═══════════════════════════════════════ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   <title>Preem Media | For Brands That Deserve More</title>
-  <meta name="description" content="Preem Media - Brand Stewards aligned with your identity, narrative, and digital presence.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Preem Media - Brand Stewards aligned with your identity, narrative, and digital presence. We build brands with intention.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="canonical" href="https://www.preemmedia.com/">
+
+  <!-- ═══════════════════════════════════════
+       OPEN GRAPH (Facebook / LinkedIn / WhatsApp)
+  ═══════════════════════════════════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.preemmedia.com/">
+  <meta property="og:title" content="Preem Media | For Brands That Deserve More">
+  <meta property="og:description" content="Brand Stewards aligned with your identity, narrative, and digital presence. We build brands with intention.">
+  <meta property="og:image" content="https://www.preemmedia.com/images/og-image.jpg">
+  <meta property="og:site_name" content="Preem Media">
+  <meta property="og:locale" content="en_US">
+
+  <!-- ═══════════════════════════════════════
+       TWITTER CARD
+  ═══════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Preem Media | For Brands That Deserve More">
+  <meta name="twitter:description" content="Brand Stewards aligned with your identity, narrative, and digital presence.">
+  <meta name="twitter:image" content="https://www.preemmedia.com/images/og-image.jpg">
+
+  <!-- ═══════════════════════════════════════
+       STRUCTURED DATA (JSON-LD)
+  ═══════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MarketingAgency",
+    "name": "Preem Media",
+    "url": "https://www.preemmedia.com",
+    "logo": "https://www.preemmedia.com/images/logo.png",
+    "description": "Brand Stewards aligned with your identity, narrative, and digital presence.",
+    "sameAs": [
+      "https://www.linkedin.com/company/preemmedia/"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "url": "https://www.linkedin.com/company/preemmedia/"
+    },
+    "service": [
+      { "@type": "Service", "name": "Branding Identity & Positioning" },
+      { "@type": "Service", "name": "Content Creation & Narration Systems" },
+      { "@type": "Service", "name": "Social & Digital Media Presence" },
+      { "@type": "Service", "name": "Community Management" }
+    ]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════
+       FONTS  (font-display:swap added via API param)
+  ═══════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header class="main-header" role="banner">
-  <div class="logo">
-    <a href="/" aria-label="Preem Media home" style="color: inherit; text-decoration: none;">Preem Media</a>
-  </div>
-  <nav aria-label="Primary navigation">
-    <a href="about-index.html" class="btn-nav">About Us</a>
-    <a href="case-studies-index.html" class="btn-nav">Blog</a>
-    <a href="blogs-index.html" class="btn-nav">Case Studies</a>
-    <a href="https://www.linkedin.com/company/preemmedia/" target="_blank" rel="noopener noreferrer" class="btn-cta premium-btn">Let's Connect</a>
-  </nav>
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</header>
 
+  <!-- ═══════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════ -->
+  <header class="main-header" role="banner">
+    <div class="logo">
+      <a href="/" aria-label="Preem Media home" style="color: inherit; text-decoration: none;">Preem Media</a>
+    </div>
+
+    <nav aria-label="Primary navigation" id="main-nav">
+      <a href="about.html" class="btn-nav">About Us</a>
+      <a href="blogs.html" class="btn-nav">Blog</a>
+      <a href="case-studies.html" class="btn-nav">Case Studies</a>
+      <a href="https://www.linkedin.com/company/preemmedia/" target="_blank" rel="noopener noreferrer" class="btn-cta premium-btn">Let's Connect</a>
+    </nav>
+
+    <!-- Hamburger — visible on mobile -->
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ═══════════════════════════════════════
+       MAIN
+  ═══════════════════════════════════════ -->
   <main>
-    <section class="hero">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
       <div class="hero-content">
         <h1>For Brands That<br><span class="text-accent">Deserve More..</span></h1>
       </div>
     </section>
 
-    <section id="about" class="who-are-we container split-layout">
+    <!-- WHO WE ARE -->
+    <section id="about" class="who-are-we container split-layout" aria-labelledby="about-heading">
       <div class="split-content">
-        <h2>We Are Your<br><span class="text-accent1">Brand Stewards.</span></h2>
+        <h2 id="about-heading">We Are Your<br><span class="text-accent1">Brand Stewards.</span></h2>
       </div>
       <div class="split-text">
         <p>Your brand is our most valuable asset and our primary responsibility. We're a team of strategists, storytellers, and creatives who believe every brand has an untold story worth building.</p>
       </div>
     </section>
 
-    <section class="how-we-work container split-layout">
+    <!-- HOW WE WORK -->
+    <section class="how-we-work container split-layout" aria-labelledby="work-heading">
       <div class="split-text text-right">
         <p>Our creation only begins once we've refined a strategy that belongs to you alone — ensuring your scale is no longer a question, but an inevitability.</p>
       </div>
       <div class="split-content text-right">
-        <h2>We Build With<br><span class="text-accent2">Intention.</span></h2>
+        <h2 id="work-heading">We Build With<br><span class="text-accent2">Intention.</span></h2>
       </div>
     </section>
 
-    <section class="services container">
+    <!-- SERVICES -->
+    <section class="services container" aria-labelledby="services-heading">
       <div class="section-header text-center">
-        <h2>What We <span class="text-accent3">Offer?</span></h2>
+        <h2 id="services-heading">What We <span class="text-accent3">Offer?</span></h2>
       </div>
+
       <div class="services-deck">
 
-        <div class="card-stack">
+        <article class="card-stack" role="article" aria-label="Branding Identity and Positioning">
           <div class="card-layer title-card">
             <h3>Branding Identity &amp; Positioning</h3>
-            <span class="indicator">+</span>
+            <span class="indicator" aria-hidden="true">+</span>
           </div>
           <div class="card-layer feature-card image-card">
-            <img src="images/card1_new.jpg" alt="Branding Identity and Positioning" class="feature-img">
+            <img src="images/card1_new.jpg"
+                 alt="Branding Identity and Positioning — visual representation of brand strategy"
+                 class="feature-img"
+                 width="400" height="320"
+                 loading="lazy"
+                 decoding="async">
           </div>
-        </div>
+        </article>
 
-        <div class="card-stack">
+        <article class="card-stack" role="article" aria-label="Content Creation and Narration Systems">
           <div class="card-layer title-card">
             <h3>Content Creation &amp; Narration Systems</h3>
-            <span class="indicator">+</span>
+            <span class="indicator" aria-hidden="true">+</span>
           </div>
           <div class="card-layer feature-card image-card">
-            <img src="images/card2_new.png" alt="Content Creation and Narration Systems" class="feature-img">
+            <img src="images/card2_new.png"
+                 alt="Content Creation and Narration Systems — storytelling and content strategy"
+                 class="feature-img"
+                 width="400" height="320"
+                 loading="lazy"
+                 decoding="async">
           </div>
-        </div>
+        </article>
 
-        <div class="card-stack">
+        <article class="card-stack" role="article" aria-label="Social and Digital Media Presence">
           <div class="card-layer title-card">
             <h3>Social &amp; Digital Media Presence</h3>
-            <span class="indicator">+</span>
+            <span class="indicator" aria-hidden="true">+</span>
           </div>
           <div class="card-layer feature-card image-card">
-            <img src="images/card3_new.jpg" alt="Social and Digital Media Presence" class="feature-img">
+            <img src="images/card3_new.jpg"
+                 alt="Social and Digital Media Presence — digital marketing and social strategy"
+                 class="feature-img"
+                 width="400" height="320"
+                 loading="lazy"
+                 decoding="async">
           </div>
-        </div>
+        </article>
 
-        <div class="card-stack">
+        <article class="card-stack" role="article" aria-label="Community Management">
           <div class="card-layer title-card">
             <h3>Community Management</h3>
-            <span class="indicator">+</span>
+            <span class="indicator" aria-hidden="true">+</span>
           </div>
           <div class="card-layer feature-card image-card card-4-container">
-            <img src="images/card4_final.png" alt="Community Management" class="feature-img">
+            <img src="images/card4_final.png"
+                 alt="Community Management — building and managing brand communities"
+                 class="feature-img"
+                 width="400" height="320"
+                 loading="lazy"
+                 decoding="async">
           </div>
-        </div>
+        </article>
 
       </div>
     </section>
 
-    <section class="final-cta">
+    <!-- FINAL CTA -->
+    <section class="final-cta" aria-label="Call to action">
       <div class="container text-center">
         <h2>Let's make it <span class="text-accent">Preem.</span></h2>
-        <a href="https://www.linkedin.com/company/preemmedia/" target="_blank" rel="noopener noreferrer" class="btn-xl">GO PREEM</a>
+        <a href="https://www.linkedin.com/company/preemmedia/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn-xl"
+           aria-label="Go Preem — Connect with us on LinkedIn">GO PREEM</a>
       </div>
     </section>
+
   </main>
 
-  <footer>
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer role="contentinfo">
     <div class="container footer-content">
       <p>&copy; Preem Media Pvt. Ltd.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- ═══════════════════════════════════════
+       MOBILE NAV SCRIPT
+       Inlined so it works without script.js changes
+  ═══════════════════════════════════════ -->
+  <script>
+  (function () {
+    const toggle = document.querySelector('.nav-toggle');
+    const nav    = document.getElementById('main-nav');
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', function () {
+      const isOpen = nav.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', isOpen);
+      toggle.classList.toggle('is-active', isOpen);
+    });
+
+    // Close nav when a link is tapped on mobile
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.classList.remove('is-active');
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+        nav.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.classList.remove('is-active');
+      }
+    });
+  })();
+  </script>
+
 </body>
 </html>
