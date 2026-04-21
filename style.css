@@ -23,19 +23,56 @@
     padding: 0;
     box-sizing: border-box
 }
+.main-header nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
 
 .btn-nav {
-  color: var(--color-text);
+  color: var(--color-text-muted);
   text-decoration: none;
   font-family: var(--font-heading);
-  font-size: 0.95rem;
-  margin-right: 1.5rem;
-  transition: color 0.3s ease;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  transition: color 0.25s, background 0.25s;
+  white-space: nowrap;
 }
 
 .btn-nav:hover {
   color: var(--color-accent);
 }
+.btn-nav:hover,
+.btn-nav.active {
+  color: var(--color-accent);
+}
+
+.btn-nav.active {
+  background: rgba(255, 215, 0, 0.06);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -105,7 +142,7 @@ p {
 .main-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
     padding: var(--space-3) var(--space-5);
     position: fixed;
     top: 0;
@@ -133,7 +170,7 @@ p {
     color: var(--color-accent);
     border: 1px solid var(--color-accent);
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
-    position: relative;
+    position: top right;
     overflow: hidden;
     z-index: 1
 }
@@ -165,6 +202,31 @@ p {
     box-shadow: 0 0 50px rgba(255, 215, 0, 0.6);
     background: var(--color-accent);
     color: var(--color-bg)
+}
+
+.hero { 
+padding: 160px 2rem 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse 60% 50% at 50% 0%,
+    rgba(255, 215, 0, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+
+}
+.hero-content h1 {
+    padding: 160px 2rem 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse 60% 50% at 50% 0%,
+    rgba(255, 215, 0, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
 }
 
 .how-we-work .split-content,
