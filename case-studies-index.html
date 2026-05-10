@@ -70,19 +70,17 @@
 
 <body>
 
-  <header class="main-header" role="banner">
-    <div class="logo">
-      <a href="/" aria-label="Preem Media home">Preem Media</a>
-    </div>
-    <nav aria-label="Primary navigation">
-      <a href="../about-index.html" class="btn-nav">About Us</a>
-      <a href="../blogs-index.html" class="btn-nav">Blog</a>
-      <a href="case-studies-index.html" class="btn-nav active" aria-current="page">Case Studies</a>
-      <a href="https://www.linkedin.com/company/preemmedia/" target="_blank" rel="noopener noreferrer" class="btn-cta premium-btn">Let's Connect</a>
-    </nav>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+  <header class="main-header" id="main-header">
+    <a href="index.html" class="logo">Preem Media<span class="logo-dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
+    <nav id="mainNav">
+      <a href="about-index.html"   class="btn-nav">About</a>
+      <a href="index-index.html#how-we-work"  class="btn-nav ">How We Work</a>
+      <a href="blogs-index.html#blogs"     class="btn-nav">Blogs</a>
+      <a href="contact-index.html"            class="btn-nav ">Contact</a>
+    </nav>
   </header>
 
   <main id="main-content">
@@ -217,9 +215,10 @@
 
   </main>
 
-  <footer role="contentinfo">
+  <!-- ── FOOTER ── -->
+  <footer>
     <div class="container footer-content">
-      <p>&copy; Preem Media Pvt. Ltd.</p>
+      <p>© 2026 Preem Media. All rights reserved.</p>
     </div>
   </footer>
 
