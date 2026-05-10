@@ -1,52 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--
+  ════════════════════════════════════════════════════════════════
+  sitemap.xml — Preem Media
+  Last rebuilt : 2026-05-10
+  Pages        : 5 (Homepage, About, Blogs, Case Studies, Contact)
+  Standards    : Sitemaps 0.9 + Google Image extension
+  AEO/GEO      : Structured to support Perplexity, ChatGPT, Gemini
+                 crawlers via open robots.txt directives (see robots.txt)
+  Maintainer   : Update <lastmod> whenever page content changes.
+                 Add individual blog / case-study <url> blocks below
+                 the placeholder comments as you publish.
+  ════════════════════════════════════════════════════════════════
+-->
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+    http://www.google.com/schemas/sitemap-image/1.1
+    http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
 
-  <!-- Homepage -->
+  <!-- ═══════════════════════════════════════
+       HOMEPAGE
+       Priority 1.0 — canonical root
+  ═══════════════════════════════════════ -->
   <url>
     <loc>https://preemmedia.com/</loc>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- About -->
+  <!-- ═══════════════════════════════════════
+       ABOUT PAGE
+       FIX: was /about.html — actual file is about-index.html
+       Priority 0.9 — second most important brand page
+  ═══════════════════════════════════════ -->
   <url>
-    <loc>https://preemmedia.com/about.html</loc>
+    <loc>https://preemmedia.com/about-index.html</loc>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://preemmedia.com/founder.png</image:loc>
+      <image:caption>Havish — Creative Director and Founder, Preem Media</image:caption>
+      <image:title>Havish, Founder of Preem Media Brand Strategy Agency</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://preemmedia.com/origin.png</image:loc>
+      <image:caption>Preem Media — Brand Stewardship in action</image:caption>
+      <image:title>Origin story — Preem Media brand strategy agency</image:title>
+    </image:image>
   </url>
 
-  <!-- Blog listing -->
+  <!-- ═══════════════════════════════════════
+       BLOG LISTING PAGE
+       FIX: was /blog/ — actual file is blogs-index.html at root
+       Priority 0.85 — high-frequency content hub (weekly updates expected)
+  ═══════════════════════════════════════ -->
   <url>
-    <loc>https://preemmedia.com/blog/</loc>
+    <loc>https://preemmedia.com/blogs-index.html</loc>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Case studies listing -->
+  <!-- ═══════════════════════════════════════
+       CASE STUDIES LISTING PAGE
+       Priority 0.8 — social proof / conversion page
+  ═══════════════════════════════════════ -->
   <url>
-    <loc>https://preemmedia.com/case-studies/</loc>
+    <loc>https://preemmedia.com/case-studies-index.html</loc>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!--
-    ADD INDIVIDUAL BLOG POSTS BELOW AS YOU PUBLISH:
+  <!-- ═══════════════════════════════════════
+       CONTACT PAGE
+       NEW: was completely missing from sitemap
+       Priority 0.75 — conversion / lead gen page
+  ═══════════════════════════════════════ -->
+  <url>
+    <loc>https://preemmedia.com/contact-index.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://preemmedia.com/Instagram_post_-_6.png</image:loc>
+      <image:caption>Preem Media — Every brand begins with a spark</image:caption>
+      <image:title>Preem Media Contact — Brand Strategy Agency</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://preemmedia.com/Building_Wall_Mockup.png</image:loc>
+      <image:caption>Preem Media — For Brands That Deserve More</image:caption>
+      <image:title>Preem Media Brand Presence Mockup</image:title>
+    </image:image>
+  </url>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       ▼ ADD INDIVIDUAL BLOG POSTS BELOW AS YOU PUBLISH ▼
+       Copy-paste this block for each new post. Update slug + lastmod.
 
   <url>
-    <loc>https://preemmedia.com/blog/your-post-slug.html</loc>
+    <loc>https://preemmedia.com/blogs/why-most-brands-fail-the-discovery-test.html</loc>
     <lastmod>YYYY-MM-DD</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
-    ADD INDIVIDUAL CASE STUDIES BELOW AS YOU PUBLISH:
-
   <url>
-    <loc>https://preemmedia.com/case-studies/your-case-study-slug.html</loc>
+    <loc>https://preemmedia.com/blogs/what-is-aeo-and-why-your-brand-needs-it.html</loc>
     <lastmod>YYYY-MM-DD</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-  -->
+
+  <url>
+    <loc>https://preemmedia.com/blogs/content-that-builds-authority-vs-fills-calendar.html</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://preemmedia.com/blogs/how-d2c-brands-own-a-category-without-big-budget.html</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://preemmedia.com/blogs/entity-vs-keyword-the-mindset-shift.html</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://preemmedia.com/blogs/how-to-structure-content-so-perplexity-chatgpt-cite-you.html</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  ▲ END BLOG POSTS ▲
+  ═══════════════════════════════════════════════════════════════ -->
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       ▼ ADD INDIVIDUAL CASE STUDIES BELOW AS YOU PUBLISH ▼
+
+  <url>
+    <loc>https://preemmedia.com/case-studies/startup-brand-launch.html</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://preemmedia.com/case-studies/d2c-content-system.html</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://preemmedia.com/case-studies/creator-personal-brand-transformation.html</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  ▲ END CASE STUDIES ▲
+  ═══════════════════════════════════════════════════════════════ -->
 
 </urlset>
