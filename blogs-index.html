@@ -4,19 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#0b0b0b">
 
   <!-- Primary SEO -->
   <title>Blog | Preem Media — Brand Strategy, Content Marketing & AEO Insights</title>
   <meta name="description" content="The Preem Media blog covers brand strategy, content marketing, AEO optimisation, D2C brand building, and social media marketing for startups, creators, and e-commerce brands.">
   <meta name="keywords" content="brand strategy blog, content marketing tips, AEO optimisation, D2C brand building, social media marketing, startup branding, creator brand strategy">
-  <link rel="canonical" href="https://preemmedia.com/blog/">
+  <link rel="canonical" href="https://preemmedia.com/blogs-index.html">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Blog | Preem Media — Brand Strategy & AEO Insights">
   <meta property="og:description" content="Weekly insights on brand strategy, content marketing, AEO, and building category-owning brands for startups and D2C brands.">
-  <meta property="og:url" content="https://preemmedia.com/blog/">
+  <meta property="og:url" content="https://preemmedia.com/blogs-index.html">
   <meta property="og:site_name" content="Preem Media">
   <meta property="og:image" content="https://preemmedia.com/images/og-blog.jpg">
 
@@ -32,7 +34,7 @@
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Preem Media Blog",
-    "url": "https://preemmedia.com/blog/",
+    "url": "https://preemmedia.com/blogs-index.html",
     "description": "Weekly insights on brand strategy, content marketing, AEO optimisation, and building category-owning brands.",
     "publisher": {
       "@type": "Organization",
@@ -43,56 +45,51 @@
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://preemmedia.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://preemmedia.com/blog/"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Home",  "item": "https://preemmedia.com" },
+        { "@type": "ListItem", "position": 2, "name": "Blog",  "item": "https://preemmedia.com/blogs-index.html" }
       ]
     }
   }
   </script>
 
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../about.css">
-  <link rel="stylesheet" href="blog.css">
+  <!-- Fonts (display=swap prevents invisible text while loading) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="blogs.css">
 </head>
 
 <body>
 
-  <header class="main-header" role="banner">
-    <div class="logo">
-      <a href="/" aria-label="Preem Media home">Preem Media</a>
-    </div>
-    <nav aria-label="Primary navigation">
-      <a href="../about-index.html" class="btn-nav">About Us</a>
-      <a href="blogs-index.html" class="btn-nav active" aria-current="page">Blog</a>
-      <a href="../case-studies-index.html" class="btn-nav">Case Studies</a>
-      <a href="https://www.linkedin.com/company/preemmedia/" target="_blank" rel="noopener noreferrer" class="btn-cta premium-btn">Let's Connect</a>
-    </nav>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+  <!-- ═══════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════ -->
+   <header class="main-header" id="main-header">
+    <a href="index.html" class="logo">Preem Media<span class="logo-dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
+    <nav id="mainNav">
+      <a href="about-index.html"   class="btn-nav">About</a>
+      <a href="index-index.html#how-we-work"  class="btn-nav ">How We Work</a>
+      <a href="blogs.html#blogs"     class="btn-nav active">Blogs</a>
+      <a href="contact-index.html"            class="btn-nav ">Contact</a>
+    </nav>
   </header>
 
+  <!-- ═══════════════════════════════════════
+       MAIN
+  ═══════════════════════════════════════ -->
   <main id="main-content">
 
     <!-- Blog Hero -->
     <section class="blog-hero" aria-labelledby="blog-hero-heading">
       <div class="container">
-        <div class="about-hero-eyebrow">Weekly Insights</div>
+        <div class="blog-eyebrow">Weekly Insights</div>
         <h1 id="blog-hero-heading">Brand Strategy.<br><span class="text-accent">Decoded.</span></h1>
-        </div>
+      </div>
     </section>
 
     <!-- Blog posts grid -->
@@ -100,21 +97,20 @@
       <div class="container">
         <h2 id="posts-heading" class="sr-only">Latest articles</h2>
 
-        <!-- FEATURED POST — replace with real post when ready -->
-        <article class="blog-card blog-card--featured" data-category="brand-strategy" aria-label="Featured post">
+        <!-- FEATURED POST -->
+        <article class="blog-card blog-card--featured" data-category="brand-strategy" aria-label="Featured post: Why Most Brands Fail the Discovery Test">
           <div class="blog-card-meta">
             <span class="blog-tag">Brand Strategy</span>
             <span class="blog-date"><time datetime="2025-01-01">(Coming soon)</time></span>
           </div>
           <h2 class="blog-card-title">
-            <a href="#" aria-label="Read: Why Most Brands Fail the Discovery Test (And How to Fix It)">
-              <AEO>Why Most Brands Fail the Discovery Test — And How to Fix It
-              <GEO></GEO>
+            <a href="#" aria-label="Read: Why Most Brands Fail the Discovery Test And How to Fix It">
+              Why Most Brands Fail the Discovery Test And How to Fix It
             </a>
           </h2>
-          <p class="blog-card-excerpt">The search results page is no longer the final destination. AI answer engines are the new gatekeepers. Here's what it takes to become the brand they cite.</p>
+          <p class="blog-card-excerpt"> AI answer engines are the new gatekeepers. Here's what it takes to become the brand they cite.</p>
           <div class="blog-card-footer">
-            <span class="blog-author">Havish · Preem Media</span>
+            <span class="blog-author">Marketing Team · Preem Media</span>
             <span class="blog-read-time">5 min read</span>
           </div>
         </article>
@@ -122,19 +118,18 @@
         <!-- POSTS GRID -->
         <div class="blog-posts-grid">
 
-          <!-- Post card template (duplicate & fill for each post) -->
           <article class="blog-card" data-category="aeo-geo">
             <div class="blog-card-meta">
               <span class="blog-tag">AEO / GEO</span>
               <span class="blog-date"><time datetime="2025-01-01">Coming soon</time></span>
             </div>
             <h3 class="blog-card-title">
-              <a href="#">What Is AEO — and Why Your Brand Needs to Optimise for AI Engines Now</a>
+              <a href="#">What Is AEO and Why Your Brand Needs to Optimise for AI Engines Now!</a>
             </h3>
             <p class="blog-card-excerpt">Answer Engine Optimisation is replacing traditional SEO as the primary discovery channel. Here's what that means for your brand.</p>
             <div class="blog-card-footer">
-              <span class="blog-author">Havish</span>
-              <span class="blog-read-time">4 min read</span>
+              <span class="blog-author">Tech Team</span>
+              <span class="blog-read-time">3 min read</span>
             </div>
           </article>
 
@@ -148,7 +143,7 @@
             </h3>
             <p class="blog-card-excerpt">Volume is not a strategy. Learn how intentional narration systems compound brand authority over time.</p>
             <div class="blog-card-footer">
-              <span class="blog-author">Havish</span>
+              <span class="blog-author">Marketing Team</span>
               <span class="blog-read-time">6 min read</span>
             </div>
           </article>
@@ -161,9 +156,9 @@
             <h3 class="blog-card-title">
               <a href="#">How D2C Brands Can Own a Category Without a Big Budget</a>
             </h3>
-            <p class="blog-card-excerpt">Category ownership isn't about media spend — it's about clarity, consistency, and a brand entity strong enough to be cited by both humans and AI.</p>
+             <p class="blog-card-excerpt">Category ownership has always relied on clarity and consistent brand identity. In 2026, Its about how we ensure our brands are distinctly recognized by human audiences and established as a definitive, trusted entity for AI Generative Engines.</p>
             <div class="blog-card-footer">
-              <span class="blog-author">Havish</span>
+              <span class="blog-author">Marketing Team</span>
               <span class="blog-read-time">5 min read</span>
             </div>
           </article>
@@ -174,12 +169,12 @@
               <span class="blog-date"><time datetime="2025-01-01">Coming soon</time></span>
             </div>
             <h3 class="blog-card-title">
-              <a href="#">Building a Social Presence That Signals Authority, Not Just Activity</a>
+              <a href="#">Building a Social Presence That Makes Sense, Not Just Activity</a>
             </h3>
             <p class="blog-card-excerpt">Posting every day means nothing if the content doesn't build brand equity. Here's the framework we use for every client.</p>
             <div class="blog-card-footer">
-              <span class="blog-author">Havish</span>
-              <span class="blog-read-time">4 min read</span>
+              <span class="blog-author">Social Media Management Team</span>
+              <span class="blog-read-time">6 min read</span>
             </div>
           </article>
 
@@ -191,9 +186,9 @@
             <h3 class="blog-card-title">
               <a href="#">Entity vs Keyword: The Mindset Shift That Changes Everything</a>
             </h3>
-            <p class="blog-card-excerpt">The brands that win in search — and in AI discovery — aren't keyword-optimised. They're entity-built. Here's the distinction that matters.</p>
+            <p class="blog-card-excerpt">The brands that win in search and in AI discovery aren't keyword optimised. They're entity built. Here's the distinction that matters.</p>
             <div class="blog-card-footer">
-              <span class="blog-author">Havish</span>
+              <span class="blog-author">Marketing Team</span>
               <span class="blog-read-time">5 min read</span>
             </div>
           </article>
@@ -208,54 +203,72 @@
             </h3>
             <p class="blog-card-excerpt">AI answer engines have specific signals they reward. Here's the content architecture that earns citations.</p>
             <div class="blog-card-footer">
-              <span class="blog-author">Havish</span>
+              <span class="blog-author">Tech and Content Team</span>
               <span class="blog-read-time">7 min read</span>
             </div>
           </article>
 
-        </div>
-        <!-- end .blog-posts-grid -->
+        </div><!-- end .blog-posts-grid -->
 
       </div>
     </section>
 
   </main>
 
-  <footer role="contentinfo">
+  <!-- ── FOOTER ── -->
+  <footer>
     <div class="container footer-content">
-      <p>&copy; Preem Media Pvt. Ltd.</p>
+      <p>© 2026 Preem Media. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="../script.js"></script>
-  <script>
-    // Category filter
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.blog-card');
+  <script src="script.js"></script>
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
+  <script>
+  (function () {
+    /* ── Mobile nav ── */
+    const toggle = document.querySelector('.nav-toggle');
+    const nav    = document.getElementById('main-nav');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', function () {
+        const isOpen = nav.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', isOpen);
+        toggle.classList.toggle('is-active', isOpen);
+      });
+
+      nav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('nav-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.classList.remove('is-active');
+        });
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+          nav.classList.remove('nav-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.classList.remove('is-active');
+        }
+      });
+    }
+
+    /* ── Category filter ── */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards      = document.querySelectorAll('.blog-card[data-category]');
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(function (b) { b.classList.remove('active'); });
         btn.classList.add('active');
         const filter = btn.dataset.filter;
-        cards.forEach(card => {
-          if (filter === 'all' || card.dataset.category === filter) {
-            card.style.display = '';
-          } else {
-            card.style.display = 'none';
-          }
+        cards.forEach(function (card) {
+          card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
         });
       });
     });
-
-    // Mobile nav
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.main-header nav');
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', !expanded);
-      nav.classList.toggle('nav-open');
-    });
+  })();
   </script>
 
 </body>
