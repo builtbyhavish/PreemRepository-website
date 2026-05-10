@@ -1,9 +1,190 @@
-User-agent: *
+# ════════════════════════════════════════════════════════════════
+# robots.txt — Preem Media (preemmedia.com)
+# Last rebuilt : 2026-05-10
+#
+# Strategy:
+#   - All legitimate crawlers: full access to content
+#   - AEO/GEO bots explicitly welcomed (Perplexity, ChatGPT,
+#     Google SGE/Gemini, Claude, Bing/Copilot, YouBot)
+#   - CSS + JS explicitly allowed so Googlebot renders pages
+#     correctly (critical for Core Web Vitals & indexing)
+#   - Sensitive / non-public paths disallowed for all bots
+#   - Crawl-delay set only for heavy scrapers, not quality bots
+# ════════════════════════════════════════════════════════════════
+
+
+# ── GOOGLEBOT — full crawl, explicit asset access ──────────────
+User-agent: Googlebot
 Allow: /
-
-# Sitemap location
-Sitemap: https://preemmedia.com/sitemap.xml
-
-# Block access to any future admin or draft folders
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.woff2$
 Disallow: /drafts/
 Disallow: /admin/
+Disallow: /private/
+
+
+# ── GOOGLEBOT-IMAGE — allow all brand imagery ──────────────────
+User-agent: Googlebot-Image
+Allow: /
+
+
+# ── GOOGLE AEO / SGE / GEMINI (Google-Extended) ────────────────
+#    Explicitly welcomed for AI Overviews and Gemini citations.
+#    This is the bot Google uses for its generative AI products.
+User-agent: Google-Extended
+Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /private/
+
+
+# ── PERPLEXITY AI ──────────────────────────────────────────────
+#    High-priority AEO bot. Perplexity cites pages it can crawl.
+#    Allowing this is essential for Preem Media's AEO strategy.
+User-agent: PerplexityBot
+Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /private/
+
+
+# ── CHATGPT / OPENAI ───────────────────────────────────────────
+#    GPTBot powers ChatGPT Browse and OpenAI's index.
+#    OAI-SearchBot is used for ChatGPT search (Bing-powered).
+#    Both must be allowed for ChatGPT citations.
+User-agent: GPTBot
+Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /private/
+
+
+# ── BING / MICROSOFT COPILOT ───────────────────────────────────
+#    Bingbot feeds Microsoft Copilot answers.
+User-agent: bingbot
+Allow: /
+Allow: /*.css$
+Allow: /*.js$
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /private/
+
+
+# ── YOU.COM ────────────────────────────────────────────────────
+User-agent: YouBot
+Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /private/
+
+
+# ── ANTHROPIC / CLAUDE ─────────────────────────────────────────
+User-agent: ClaudeBot
+Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /private/
+
+
+# ── APPLE / SIRI ───────────────────────────────────────────────
+User-agent: Applebot
+Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /private/
+
+
+# ── AMAZON ALEXA ───────────────────────────────────────────────
+User-agent: Amazonbot
+Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /private/
+
+
+# ── DUCKDUCKGO ─────────────────────────────────────────────────
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /private/
+
+
+# ── COMMON SEO AUDIT TOOLS (Ahrefs, Semrush, Moz) ─────────────
+#    Allow so your own audits and brand mentions are tracked.
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+
+# ── BLOCK KNOWN BAD ACTORS / SCRAPERS ─────────────────────────
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: serpstatbot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+
+# ── CATCH-ALL: everything else gets full access ────────────────
+#    We keep this open because restrictive defaults can block
+#    legitimate AI indexers we haven't listed above.
+User-agent: *
+Allow: /
+Allow: /*.css$
+Allow: /*.js$
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /private/
+
+
+# ── SITEMAP DECLARATION ────────────────────────────────────────
+Sitemap: https://preemmedia.com/sitemap.xml
