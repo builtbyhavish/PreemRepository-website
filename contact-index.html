@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Preem Media. We work with early-stage teams and ambitious brands to build identities that connect." />
+  <title>Contact — Preem Media</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="main-header" id="main-header">
+    <a href="index.html" class="logo">Preem Media<span class="logo-dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="about.html"            class="btn-nav">About</a>
+      <a href="index.html#how-we-work" class="btn-nav">How We Work</a>
+      <a href="blogs.html"            class="btn-nav">Blogs</a>
+      <a href="contact.html"          class="btn-nav active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 1 — HERO
+    ══════════════════════════════════════════ -->
+    <section class="contact-hero" aria-label="Hero">
+      <div class="hero-bg-glow" aria-hidden="true"></div>
+      <div class="container contact-hero__inner">
+        <span class="section-label">Contact Us!</span>
+        <h1>Let's&nbsp; Get In<br /><span class="text-accent-hero">Touch!</span></h1>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 2 — SPARK / INTRO  (image right)
+    ══════════════════════════════════════════ -->
+    <section class="spark-section" id="spark" aria-label="Our Belief">
+      <div class="container split-layout">
+
+        <!-- Left: Copy -->
+        <div class="split-text">
+          <span class="section-label">Our Belief</span>
+          <h2>Every brand begins<br />with a spark.</h2>
+          <p>
+            Turning that spark into something people recognize, trust, and remember takes
+            care, clarity, and the right kind of partnership.
+          </p>
+          <p class="mt-p">
+            At Preem Media, we work closely with early-stage teams and ambitious brands
+            that deserve more attention, more intention, and a partner who truly understands
+            the weight of that phase. Whether you have a clear vision or just a strong
+            instinct that something bigger is possible — we're here for it.
+          </p>
+        </div>
+
+        <!-- Right: Image — replace src with your filename -->
+        <img src="Instagram post - 6.png" alt="Preem Media — Every brand begins with a spark" class="section-img" />
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 3 — TELL US / FORM + CALL
+    ══════════════════════════════════════════ -->
+    <section class="tell-us" id="tell-us" aria-label="Tell Us What You're Building">
+      <div class="container">
+
+        <!-- BUG FIX 1: Removed empty section-label span that rendered a blank gold block -->
+        <div class="section-header">
+          <h2>Tell Us What You're Building</h2>
+          <p>
+            We'd love to hear about your brand, your ideas, or even the challenges
+            that have been sitting in the back of your mind.
+          </p>
+        </div>
+
+        <div class="tell-us__grid">
+
+          <!-- Left: Description + CTA -->
+          <!-- BUG FIX 2: Renamed paragraph class from tell-us__copy to tell-us__services
+               to avoid conflict with the parent layout div's class -->
+          <div class="tell-us__copy">
+            <p>
+              Whether you're shaping an idea, refining your identity, or trying to bring
+              consistency to your brand's voice — we'd love to understand what you're building.
+            </p>
+            <p class="mt-p tell-us__italic">
+              Just a real conversation about where you are, and where you could go.
+            </p>
+
+            <a
+              href="CALENDLY_LINK_HERE"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-cta btn-call"
+              aria-label="Book a 15-minute call on Calendly"
+            >
+              Book a Quick 15-Min Call →
+            </a>
+
+            <!-- BUG FIX 2: Was class="mt-p tell-us__copy" — conflicted with parent div -->
+            <p class="mt-p tell-us__services">
+              From ideation and positioning to identity creation, communication, and ongoing
+              marketing management we help you navigate every stage with intention.
+              <br>When it comes to showing up in the world, we stay with you through content
+              creation, social presence, and community building.
+              <br>Your brand doesn't just exist — it connects.
+            </p>
+          </div>
+
+          <!-- Right: Contact form — Web3Forms -->
+          <div class="tell-us__form-wrap">
+
+            <!-- BUG FIX 3: Removed novalidate — Web3Forms handles validation server-side.
+                 Added action + method. Hidden inputs for access_key and redirect. -->
+            <form
+              class="contact-form"
+              id="contactForm"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+              <!-- Web3Forms: required access key -->
+              <input type="hidden" name="access_key" value="a71611c7-3c4d-46c8-aeee-a296f03c51aa" />
+              <!-- Web3Forms: prevent default redirect, handle response in JS -->
+              <input type="hidden" name="redirect" value="false" />
+
+              <div class="success-message" id="successMsg" role="status" aria-live="polite">
+                ✓ Message sent! We'll be in touch soon.
+              </div>
+              <div class="error-message" id="errorMsg" role="alert" aria-live="assertive">
+                Something went wrong. Please try again.
+              </div>
+
+              <div class="form-group">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="jane@yourbrand.com" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="brand" class="form-label">Your Brand / Project</label>
+                <input type="text" id="brand" name="brand" placeholder="What are you building?" />
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Tell Us More</label>
+                <textarea id="message" name="message" placeholder="What's on your mind? Share your vision, challenge, or just a spark of an idea…" required></textarea>
+              </div>
+
+              <button type="submit" class="btn-cta" id="submitBtn">
+                Send Message
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 4 — FOR BRANDS THAT DESERVE MORE
+    ══════════════════════════════════════════ -->
+    <section class="deserve-more" id="deserve-more" aria-label="For Brands That Deserve More">
+      <div class="container split-layout split-layout--reverse">
+
+        <!-- Left: Copy + Links -->
+        <div class="split-text">
+          <span class="section-label">Work With Us</span>
+          <h2>For Brands That<br />Deserve More</h2>
+          <p>
+            We work best with early-stage teams and growing brands that need more than
+            just deliverables. They need attention, thought, and a partner — because
+            our brands deserve more.
+          </p>
+
+          <div class="direct-links">
+            <a href="mailto:info@preemmedia.com" class="direct-link" aria-label="Email Preem Media">
+              <span class="direct-link__icon" aria-hidden="true">✉</span>
+              <span>
+                <strong>Email us directly</strong>
+                <em>info@preemmedia.com</em>
+              </span>
+            </a>
+            <a href="https://www.linkedin.com/company/preemmedia" target="_blank" rel="noopener noreferrer" class="direct-link" aria-label="Preem Media on LinkedIn">
+              <span class="direct-link__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.447 20.452H17.21v-5.569c0-1.327-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.984V9h3.102v1.561h.044c.432-.82 1.49-1.685 3.066-1.685 3.276 0 3.881 2.156 3.881 4.961v6.615h-.63ZM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6ZM6.956 20.452H3.718V9h3.238v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"/>
+                </svg>
+              </span>
+              <span>
+                <strong>Drop us a message</strong>
+                <em>Preem Media on LinkedIn</em>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Image — replace src with your filename -->
+        <img src="Building Wall Mockup.png" alt="Preem Media — For Brands That Deserve More" class="section-img" />
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 5 — FINAL CTA
+         Scrolls to the contact form on this page
+    ══════════════════════════════════════════ -->
+    <section class="final-cta" aria-label="Final Call to Action">
+      <div class="container text-center">
+        <h2>Let's make it <span class="text-accent">Preem.</span></h2>
+        <a href="#tell-us" class="btn-xl" aria-label="Go Preem — start your journey">GO PREEM</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container footer-content">
+      <p>© 2026 Preem Media. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Nav scroll effect ──
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ── Mobile nav toggle ──
+    const navToggle = document.getElementById('navToggle');
+    const mainNav   = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => {
+      const open = mainNav.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    // ── Web3Forms submission — inline success, no reload ──
+    const form       = document.getElementById('contactForm');
+    const successMsg = document.getElementById('successMsg');
+    const errorMsg   = document.getElementById('errorMsg');
+    const submitBtn  = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      successMsg.style.display = 'none';
+      errorMsg.style.display   = 'none';
+      submitBtn.disabled       = true;
+      submitBtn.textContent    = 'Sending…';
+
+      try {
+        const res  = await fetch('https://api.web3forms.com/submit', {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body:    JSON.stringify(Object.fromEntries(new FormData(form)))
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          successMsg.style.display = 'block';
+          form.reset();
+          // Scroll success message into view smoothly
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          throw new Error(data.message || 'Submission failed');
+        }
+      } catch {
+        errorMsg.style.display = 'block';
+      } finally {
+        submitBtn.disabled    = false;
+        submitBtn.textContent = 'Send Message';
+      }
+    });
+  </script>
+
+</body>
+</html>
