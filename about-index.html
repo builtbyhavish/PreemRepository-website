@@ -9,13 +9,13 @@
   <title>About Preem Media | Brand Strategy & Content Marketing Agency</title>
   <meta name="description" content="Preem Media is a brand stewardship and content marketing agency helping startups, D2C brands, and creators achieve category ownership through intentional design, AEO-optimised content, and digital storytelling.">
   <meta name="keywords" content="brand strategy agency, content marketing agency, social media marketing agency, brand management company, full-service digital agency, AEO agency, brand identity agency for startups, D2C brand agency, creator brand strategy">
-  <link rel="canonical" href="https://preemmedia.com/about.html">
+  <link rel="canonical" href="https://preemmedia.com/about-index.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="About Preem Media | Brand Strategy & Content Marketing Agency">
   <meta property="og:description" content="We don't chase keywords — we build brand entities. Preem Media fuses intentional design with AEO/GEO precision to make your brand the definitive answer in its category.">
-  <meta property="og:url" content="https://preemmedia.com/about.html">
+  <meta property="og:url" content="https://preemmedia.com/about-index.html">
   <meta property="og:site_name" content="Preem Media">
   <meta property="og:image" content="https://preemmedia.com/images/og-about.jpg">
 
@@ -70,7 +70,7 @@
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "About Preem Media",
-    "url": "https://preemmedia.com/about.html",
+    "url": "https://preemmedia.com/about-index.html",
     "description": "Learn about Preem Media's origin, philosophy, and the founder behind the brand stewardship agency.",
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -85,7 +85,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "About",
-          "item": "https://preemmedia.com/about.html"
+          "item": "https://preemmedia.com/about-index.html"
         }
       ]
     },
@@ -139,20 +139,18 @@
 
 <body>
 
-  <!-- Header -->
-  <header class="main-header" role="banner">
-    <div class="logo">
-      <a href="/" aria-label="Preem Media home" style="color: inherit; text-decoration: none;">Preem Media</a>
-    </div>
-    <nav aria-label="Primary navigation">
-      <a href="about-index.html" class="btn-nav active" aria-current="page">About Us</a>
-      <a href="blogs-index.html" class="btn-nav">Blog</a>
-      <a href="case-studies-index.html" class="btn-nav">Case Studies</a>
-      <a href="https://www.linkedin.com/company/preemmedia" target="_blank" rel="noopener noreferrer" class="btn-cta premium-btn">Let's Connect</a>
-    </nav>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+  <!-- ── HEADER ── -->
+   <header class="main-header" id="main-header">
+    <a href="index.html" class="logo">Preem Media<span class="logo-dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
+    <nav id="mainNav">
+      <a href="about-index.html"   class="btn-nav active">About</a>
+      <a href="index.html#how-we-work"  class="btn-nav">How We Work</a>
+      <a href="blogs-index.html#blogs"     class="btn-nav">Blogs</a>
+      <a href="contact-index.html"            class="btn-nav ">Contact</a>
+    </nav>
   </header>
 
   <!-- Anchor nav (sticky, in-page) -->
@@ -266,18 +264,18 @@
     <section class="about-cta final-cta" aria-labelledby="cta-heading">
       <div class="container text-center">
         <h2 id="cta-heading">Ready to become the<br><span class="text-accent">definitive answer</span> in your category?</h2>
-        <a href="https://www.linkedin.com/company/preemmedia" target="_blank" rel="noopener noreferrer" class="btn-xl">GO PREEM</a>
+        <a href="contact-index.html" target="_blank" rel="noopener noreferrer" class="btn-xl">GO PREEM</a>
       </div>
     </section>
 
   </main>
 
-  <footer role="contentinfo">
+  <!-- ── FOOTER ── -->
+  <footer>
     <div class="container footer-content">
-      <p>&copy; Preem Media Pvt. Ltd.</p>
+      <p>© 2026 Preem Media. All rights reserved.</p>
     </div>
   </footer>
-
   <script src="../script.js"></script>
   <script>
     // Anchor nav active state on scroll
