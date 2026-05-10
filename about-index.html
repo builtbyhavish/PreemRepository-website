@@ -276,9 +276,30 @@
       <p>© 2026 Preem Media. All rights reserved.</p>
     </div>
   </footer>
-  <script src="../script.js"></script>
   <script>
-    // Anchor nav active state on scroll
+    // ── Nav scroll effect ──
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ── Mobile nav toggle ──
+    const navToggle = document.getElementById('navToggle');
+    const mainNav   = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => {
+      const open = mainNav.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    // ── Close nav when a link is tapped ──
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ── Anchor nav active state on scroll ──
     const anchorLinks = document.querySelectorAll('.anchor-link');
     const sections = document.querySelectorAll('#our-story, #our-approach, #founder');
 
@@ -293,16 +314,6 @@
     }, { threshold: 0.4 });
 
     sections.forEach(s => anchorObserver.observe(s));
-
-    // Mobile nav toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.main-header nav');
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', !expanded);
-      nav.classList.toggle('nav-open');
-    });
   </script>
-
 </body>
 </html>
