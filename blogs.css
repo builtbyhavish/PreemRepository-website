@@ -1,20 +1,30 @@
-/* ============================================================
-   blog.css — Preem Media Blog Page Styles
-   ============================================================ */
+/* ═══════════════════════════════════════════════════════
+   blog.css  —  Preem Media Blog Page
+   Extends style.css. Never overrides base design tokens.
+═══════════════════════════════════════════════════════ */
 
+/* ─────────────────────────────────────────
+   ACCESSIBILITY UTILITY
+───────────────────────────────────────── */
 .sr-only {
   position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
 }
 
+/* ─────────────────────────────────────────
+   BLOG HERO
+   Matches the home hero and about hero rhythm
+───────────────────────────────────────── */
 .blog-hero {
-  padding: 160px 0 80px;
-  text-align: left;
+  padding: var(--space-20) 0 var(--space-10);
+  text-align: center;
 }
 
 .blog-hero h1 {
@@ -25,30 +35,40 @@
   margin-bottom: 1.5rem;
 }
 
-.blog-hero .about-hero-sub {
-  text-align: right;
-  margin: 0;
-  max-width: 60ch;
+/* Eyebrow label — mirrors the about page style,
+   defined here so blog.css has no dependency on about.css */
+.blog-eyebrow {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-2);
+  display: block;
 }
 
-/* --- Blog grid section --- */
+/* ─────────────────────────────────────────
+   BLOG GRID SECTION
+───────────────────────────────────────── */
 .blog-grid-section {
-  padding-bottom: 120px;
+  padding-bottom: var(--space-16);
 }
 
-/* Featured post */
+/* ─────────────────────────────────────────
+   FEATURED POST CARD
+───────────────────────────────────────── */
 .blog-card--featured {
-  background: rgba(255,215,0,0.03);
-  border: 1px solid rgba(255,215,0,0.15);
+  background: rgba(255, 215, 0, 0.03);
+  border: 1px solid rgba(255, 215, 0, 0.15);
   border-radius: 16px;
-  padding: 2.5rem;
-  margin-bottom: 3rem;
+  padding: var(--space-5);
+  margin-bottom: var(--space-8);
   transition: border-color 0.3s ease, background 0.3s ease;
 }
 
 .blog-card--featured:hover {
-  border-color: rgba(255,215,0,0.4);
-  background: rgba(255,215,0,0.06);
+  border-color: rgba(255, 215, 0, 0.4);
+  background: rgba(255, 215, 0, 0.06);
 }
 
 .blog-card--featured .blog-card-title {
@@ -56,16 +76,21 @@
   margin: 1rem 0;
 }
 
-/* Regular post cards */
+/* ─────────────────────────────────────────
+   POSTS GRID
+───────────────────────────────────────── */
 .blog-posts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
+/* ─────────────────────────────────────────
+   BLOG CARD (shared by featured + grid)
+───────────────────────────────────────── */
 .blog-card {
-  background: rgba(255,255,255,0.025);
-  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 12px;
   padding: 1.75rem;
   display: flex;
@@ -74,11 +99,12 @@
 }
 
 .blog-card:hover {
-  border-color: rgba(255,215,0,0.25);
-  background: rgba(255,255,255,0.04);
+  border-color: rgba(255, 215, 0, 0.25);
+  background: rgba(255, 255, 255, 0.04);
   transform: translateY(-4px);
 }
 
+/* Meta row (tag + date) */
 .blog-card-meta {
   display: flex;
   align-items: center;
@@ -87,6 +113,7 @@
   flex-wrap: wrap;
 }
 
+/* Category tag pill */
 .blog-tag {
   font-family: var(--font-heading);
   font-size: 0.7rem;
@@ -94,16 +121,19 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-accent);
-  background: rgba(255,215,0,0.08);
+  background: rgba(255, 215, 0, 0.08);
   border-radius: 4px;
   padding: 3px 8px;
+  white-space: nowrap;
 }
 
+/* Date */
 .blog-date {
   font-size: 0.8rem;
   color: var(--color-text-muted);
 }
 
+/* Card title */
 .blog-card-title {
   font-family: var(--font-heading);
   font-size: 1.1rem;
@@ -114,15 +144,16 @@
 }
 
 .blog-card-title a {
-  color: var(--color-text);
+  color: var(--color-accent);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .blog-card-title a:hover {
-  color: var(--color-accent);
+  color: #ffffff;
 }
 
+/* Excerpt */
 .blog-card-excerpt {
   font-size: 0.9rem;
   color: var(--color-text-muted);
@@ -131,32 +162,57 @@
   max-width: none;
 }
 
+/* Card footer (author + read time) */
 .blog-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding-top: 1rem;
   margin-top: auto;
   font-size: 0.8rem;
   color: var(--color-text-muted);
+  gap: 0.5rem;
+}
+
+.blog-author {
+  font-family: var(--font-body);
 }
 
 .blog-read-time {
   font-family: var(--font-heading);
   font-size: 0.75rem;
+  white-space: nowrap;
 }
 
-/* --- Mobile --- */
-@media (max-width: 900px) {
-  .blog-posts-grid {
-    grid-template-columns: 1fr 1fr;
+/* ─────────────────────────────────────────
+   REDUCE MOTION
+───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .blog-card,
+  .blog-card--featured {
+    transition: none;
+  }
+  .blog-card:hover {
+    transform: none;
   }
 }
 
+/* ─────────────────────────────────────────
+   RESPONSIVE — TABLET (≤900px)
+───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .blog-posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — MOBILE (≤600px)
+───────────────────────────────────────── */
 @media (max-width: 600px) {
   .blog-hero {
-    padding: 120px 0 60px;
+    padding: var(--space-12) 0 var(--space-8);
   }
 
   .blog-posts-grid {
@@ -165,5 +221,30 @@
 
   .blog-card--featured {
     padding: 1.5rem;
+  }
+
+  .blog-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — SMALL MOBILE (≤400px)
+   Mirrors the breakpoint in style.css
+───────────────────────────────────────── */
+@media (max-width: 400px) {
+  .blog-hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .blog-card {
+    padding: 1.25rem;
+  }
+
+  .blog-card--featured {
+    padding: 1.25rem;
+    margin-bottom: var(--space-4);
   }
 }
