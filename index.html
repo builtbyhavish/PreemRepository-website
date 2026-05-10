@@ -111,7 +111,7 @@
     <section class="final-cta">
       <div class="container text-center">
         <h2>Let's make it <span class="text-accent">Preem.</span></h2>
-        <a href="contact-index.html" target="_blank" rel="noopener noreferrer" class="btn-xl">GO PREEM</a>
+        <a href="contact.html" target="_blank" rel="noopener noreferrer" class="btn-xl">GO PREEM</a>
       </div>
     </section>
   </main>
@@ -123,6 +123,28 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // ── Nav scroll effect ──
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ── Mobile nav toggle ──
+    const navToggle = document.getElementById('navToggle');
+    const mainNav   = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => {
+      const open = mainNav.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    // ── Close nav when a link is tapped ──
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
 </html>
