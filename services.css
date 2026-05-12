@@ -1,0 +1,658 @@
+/* ============================================================
+   services.css — Preem Media Services Page
+   Extends style.css. Never overrides base design tokens.
+   Layout: Flexbox + Grid. Fully responsive. No sticky side effects.
+   ============================================================ */
+
+
+/* ── Logo & nav (mirrored from about.css) ───────────────── */
+
+.logo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-header nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.btn-nav {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  transition: color 0.25s, background 0.25s;
+  white-space: nowrap;
+}
+
+.btn-nav:hover,
+.btn-nav.active {
+  color: var(--color-accent);
+}
+
+.btn-nav.active {
+  background: rgba(255, 215, 0, 0.06);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+
+/* ── Anchor nav (sticky in-page) ────────────────────────── */
+
+.anchor-nav {
+  position: sticky;
+  top: 81px;
+  z-index: 90;
+  background: rgba(11, 11, 11, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.anchor-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.anchor-nav-inner::-webkit-scrollbar { display: none; }
+
+.anchor-link {
+  display: block;
+  padding: 0.85rem 0;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.25s, border-color 0.25s;
+}
+
+.anchor-link:hover,
+.anchor-link.active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+
+/* ── Shared eyebrow & heading (mirrors about.css) ───────── */
+
+.section-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  opacity: 0.8;
+  margin-bottom: 1.25rem;
+}
+
+.section-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 1.5rem;
+}
+
+.section-intro {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  max-width: 72ch;
+  margin-bottom: 1.1rem;
+}
+
+.section-intro strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+
+/* ── Hero ───────────────────────────────────────────────── */
+
+.services-hero {
+  padding: 160px 2rem 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 60% 55% at 50% 0%,
+    rgba(255, 215, 0, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.services-hero-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.services-hero h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+
+.services-hero-sub {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  margin: 0 auto;
+}
+
+
+/* ── Shared section wrapper ─────────────────────────────── */
+
+.services-section {
+  padding: 80px 0;
+}
+
+.services-section--dark {
+  background: #0f0f0f;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+
+/* ══════════════════════════════════════════
+   S1 — INTRO SECTION
+   Split: text left, promise block right
+══════════════════════════════════════════ */
+
+.intro-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.intro-promise {
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Promise / stat block */
+.promise-block {
+  background: rgba(255, 215, 0, 0.04);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.promise-block-title {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.promise-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.promise-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.promise-item-icon {
+  font-size: 1rem;
+  color: var(--color-accent);
+  line-height: 1.6;
+  flex-shrink: 0;
+}
+
+.promise-item-text {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0;
+  max-width: none;
+}
+
+.promise-item-text strong {
+  color: var(--color-text);
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Intro blockquote */
+.services-quote {
+  border-left: 2px solid var(--color-accent);
+  margin: 1.5rem 0 0;
+  padding: 0.9rem 1.25rem;
+  background: rgba(255, 215, 0, 0.03);
+  border-radius: 0 8px 8px 0;
+  max-width: 72ch;
+}
+
+.services-quote p {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--color-text);
+  font-style: italic;
+  margin: 0;
+}
+
+
+/* ══════════════════════════════════════════
+   S2 — SERVICES OVERVIEW GRID
+   6 cards in a 3×2 grid
+══════════════════════════════════════════ */
+
+.services-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.service-overview-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: border-color 0.25s, background 0.25s, transform 0.25s;
+  cursor: pointer;
+}
+
+.service-overview-card:hover {
+  border-color: rgba(255, 215, 0, 0.3);
+  background: rgba(255, 215, 0, 0.04);
+  transform: translateY(-4px);
+}
+
+.soc-number {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  opacity: 0.7;
+}
+
+.soc-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.soc-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+  max-width: none;
+  flex: 1;
+}
+
+.soc-cta {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+  transition: letter-spacing 0.25s;
+}
+
+.service-overview-card:hover .soc-cta {
+  letter-spacing: 0.1em;
+}
+
+
+/* ══════════════════════════════════════════
+   S3 – S8 — INDIVIDUAL SERVICE SECTIONS
+   Two-column: 60% text | 40% what's included
+   Placeholder spans full width below
+══════════════════════════════════════════ */
+
+.service-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 3.5rem;
+}
+
+.service-layout--reverse {
+  flex-direction: row-reverse;
+}
+
+.service-text-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.service-includes-col {
+  flex: 0 0 280px;
+}
+
+/* Service includes panel */
+.service-includes-panel {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 1.5rem;
+  position: sticky;
+  top: 140px; /* below anchor nav */
+}
+
+.sip-label {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  opacity: 0.7;
+  margin-bottom: 1.1rem;
+  display: block;
+}
+
+.sip-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sip-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.sip-list li::before {
+  content: '✦';
+  color: var(--color-accent);
+  font-size: 0.6rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* Service callout / highlight quote */
+.service-callout {
+  border-left: 2px solid var(--color-accent);
+  margin: 1.5rem 0;
+  padding: 0.9rem 1.25rem;
+  background: rgba(255, 215, 0, 0.03);
+  border-radius: 0 8px 8px 0;
+}
+
+.service-callout p {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  font-style: italic;
+  margin: 0;
+  max-width: none;
+}
+
+
+/* ── Service Detail Placeholder ─────────────────────────── */
+/*
+   Full-width block at the bottom of each service section.
+   Dashed border, "Coming Soon" badge — consistent with
+   the case-studies page placeholder style.
+*/
+
+.service-detail-placeholder {
+  margin-top: 3rem;
+  border: 1.5px dashed rgba(255, 215, 0, 0.2);
+  border-radius: 14px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: rgba(255, 215, 0, 0.015);
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.service-detail-placeholder:hover {
+  border-color: rgba(255, 215, 0, 0.35);
+  background: rgba(255, 215, 0, 0.03);
+}
+
+.sdp-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: rgba(255, 215, 0, 0.08);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-bottom: 1rem;
+}
+
+.sdp-heading {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+.sdp-text {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 0 auto 1.25rem;
+  max-width: 60ch;
+}
+
+.sdp-link {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.sdp-link:hover {
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+
+/* ── CTA section ────────────────────────────────────────── */
+
+.services-cta h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 2.5rem;
+}
+
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — TABLET (≤900px)
+══════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+
+  .intro-layout {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .intro-promise {
+    flex: none;
+    width: 100%;
+  }
+
+  .services-overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-layout,
+  .service-layout--reverse {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .service-includes-col {
+    flex: none;
+    width: 100%;
+  }
+
+  .service-includes-panel {
+    position: static;
+  }
+
+}
+
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — MOBILE (≤600px)
+══════════════════════════════════════════ */
+
+@media (max-width: 600px) {
+
+  .services-hero {
+    padding: 110px 1.25rem 60px;
+  }
+
+  .services-section {
+    padding: 60px 0;
+  }
+
+  .anchor-nav-inner {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .services-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-detail-placeholder {
+    padding: 2rem 1.25rem;
+  }
+
+  /* Mobile nav drawer */
+  .main-header nav {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.25rem 1.5rem 1.5rem;
+    background: rgba(11, 11, 11, 0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 99;
+  }
+
+  .main-header nav.nav-open {
+    display: flex;
+  }
+
+  .btn-nav {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .btn-cta.premium-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+}
+
+
+/* ══════════════════════════════════════════
+   REDUCE MOTION
+══════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  .service-overview-card,
+  .service-detail-placeholder {
+    transition: none;
+  }
+  .service-overview-card:hover {
+    transform: none;
+  }
+}
