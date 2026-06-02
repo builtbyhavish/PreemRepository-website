@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   ════════════════════════════════════════════════════════════════
-  sitemap.xml — Preem Media
-  Last rebuilt : 2026-05-10
-  Pages        : 5 (Homepage, About, Blogs, Case Studies, Contact)
-  Standards    : Sitemaps 0.9 + Google Image extension
-  AEO/GEO      : Structured to support Perplexity, ChatGPT, Gemini
-                 crawlers via open robots.txt directives (see robots.txt)
-  Maintainer   : Update <lastmod> whenever page content changes.
-                 Add individual blog / case-study <url> blocks below
-                 the placeholder comments as you publish.
+  sitemap.xml — Preem Media (preemmedia.com)
+  Last rebuilt : 2026-06-02
+  Domain       : Confirmed via CNAME → preemmedia.com
+
+  Pages indexed (6):
+    1. Homepage / About    https://preemmedia.com/
+    2. Services            https://preemmedia.com/services-index.html
+    3. Blog listing        https://preemmedia.com/blogs-index.html
+    4. Case Studies        https://preemmedia.com/case-studies-index.html
+    5. Contact             https://preemmedia.com/contact-index.html
+    6. Privacy Policy      https://preemmedia.com/privacy-policy.html
+
+  Canonical fixes applied in HTML too:
+    ✓ index.html           canonical was → about-index.html (404). Fixed → /
+    ✓ case-studies         canonical was → /case-studies/ (404). Fixed → case-studies-index.html
+    ✓ contact-index.html   had NO canonical + NO robots meta. Both added.
   ════════════════════════════════════════════════════════════════
 -->
 <urlset
@@ -22,27 +29,18 @@
     http://www.google.com/schemas/sitemap-image/1.1
     http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
 
-  <!-- ═══════════════════════════════════════
-       HOMEPAGE
-       Priority 1.0 — canonical root
-  ═══════════════════════════════════════ -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       1. HOMEPAGE / ABOUT
+       Canonical: https://preemmedia.com/
+       File:      index.html
+       FIX: was pointing to about-index.html which does not exist
+  ═══════════════════════════════════════════════════════════════ -->
   <url>
     <loc>https://preemmedia.com/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- ═══════════════════════════════════════
-       ABOUT PAGE
-       FIX: was /about.html — actual file is about-index.html
-       Priority 0.9 — second most important brand page
-  ═══════════════════════════════════════ -->
-  <url>
-    <loc>https://preemmedia.com/about-index.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
     <image:image>
       <image:loc>https://preemmedia.com/founder.png</image:loc>
       <image:caption>Havish — Creative Director and Founder, Preem Media</image:caption>
@@ -55,127 +53,167 @@
     </image:image>
   </url>
 
-  <!-- ═══════════════════════════════════════
-       BLOG LISTING PAGE
-       FIX: was /blog/ — actual file is blogs-index.html at root
-       Priority 0.85 — high-frequency content hub (weekly updates expected)
-  ═══════════════════════════════════════ -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       2. SERVICES
+       Canonical: https://preemmedia.com/services-index.html
+       File:      services-index.html
+       NOTE: Was MISSING from the previous sitemap entirely.
+       Priority:  0.95 — primary commercial / conversion page
+  ═══════════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://preemmedia.com/services-index.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       3. BLOG LISTING
+       Canonical: https://preemmedia.com/blogs-index.html
+       File:      blogs-index.html
+       changefreq weekly — content hub updated as posts publish
+  ═══════════════════════════════════════════════════════════════ -->
   <url>
     <loc>https://preemmedia.com/blogs-index.html</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- ═══════════════════════════════════════
-       CASE STUDIES LISTING PAGE
-       Priority 0.8 — social proof / conversion page
-  ═══════════════════════════════════════ -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       4. CASE STUDIES
+       Canonical: https://preemmedia.com/case-studies-index.html
+       File:      case-studies-index.html
+       FIX: was /case-studies/ (directory that doesn't exist → 404)
+  ═══════════════════════════════════════════════════════════════ -->
   <url>
     <loc>https://preemmedia.com/case-studies-index.html</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
 
-  <!-- ═══════════════════════════════════════
-       CONTACT PAGE
-       NEW: was completely missing from sitemap
-       Priority 0.75 — conversion / lead gen page
-  ═══════════════════════════════════════ -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       5. CONTACT
+       Canonical: https://preemmedia.com/contact-index.html
+       File:      contact-index.html
+       NOTE: Had NO canonical tag and NO robots meta tag — both added.
+       Priority:  0.75 — lead generation page
+  ═══════════════════════════════════════════════════════════════ -->
   <url>
     <loc>https://preemmedia.com/contact-index.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.75</priority>
     <image:image>
-      <image:loc>https://preemmedia.com/Instagram_post_-_6.png</image:loc>
+      <image:loc>https://preemmedia.com/Instagram%20post%20-%206.png</image:loc>
       <image:caption>Preem Media — Every brand begins with a spark</image:caption>
       <image:title>Preem Media Contact — Brand Strategy Agency</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://preemmedia.com/Building_Wall_Mockup.png</image:loc>
+      <image:loc>https://preemmedia.com/Building%20Wall%20Mockup.png</image:loc>
       <image:caption>Preem Media — For Brands That Deserve More</image:caption>
       <image:title>Preem Media Brand Presence Mockup</image:title>
     </image:image>
   </url>
 
 
-  <!-- ═══════════════════════════════════════════════════════════════
-       ▼ ADD INDIVIDUAL BLOG POSTS BELOW AS YOU PUBLISH ▼
-       Copy-paste this block for each new post. Update slug + lastmod.
+  <!-- ═══════════════════════════════════════════════════════════
+       6. PRIVACY POLICY
+       Canonical: https://preemmedia.com/privacy-policy.html
+       NOTE: Was MISSING from the previous sitemap.
+       Priority:  0.30 — legal page, indexed for trust signals
+  ═══════════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://preemmedia.com/privacy-policy.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       INDIVIDUAL BLOG POSTS — uncomment and fill in as you publish
+       · Use descriptive slugs (good for SEO + AEO citations)
+       · Set lastmod to the actual publish date
+       · changefreq: yearly (posts don't change after publish)
+       · priority: 0.70 for all individual posts
+  ═══════════════════════════════════════════════════════════════════════
 
   <url>
     <loc>https://preemmedia.com/blogs/why-most-brands-fail-the-discovery-test.html</loc>
     <lastmod>YYYY-MM-DD</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
   </url>
 
   <url>
     <loc>https://preemmedia.com/blogs/what-is-aeo-and-why-your-brand-needs-it.html</loc>
     <lastmod>YYYY-MM-DD</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
   </url>
 
   <url>
     <loc>https://preemmedia.com/blogs/content-that-builds-authority-vs-fills-calendar.html</loc>
     <lastmod>YYYY-MM-DD</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
   </url>
 
   <url>
     <loc>https://preemmedia.com/blogs/how-d2c-brands-own-a-category-without-big-budget.html</loc>
     <lastmod>YYYY-MM-DD</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
   </url>
 
   <url>
     <loc>https://preemmedia.com/blogs/entity-vs-keyword-the-mindset-shift.html</loc>
     <lastmod>YYYY-MM-DD</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
   </url>
 
   <url>
     <loc>https://preemmedia.com/blogs/how-to-structure-content-so-perplexity-chatgpt-cite-you.html</loc>
     <lastmod>YYYY-MM-DD</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
   </url>
 
-  ▲ END BLOG POSTS ▲
-  ═══════════════════════════════════════════════════════════════ -->
+  END BLOG POSTS
 
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       ▼ ADD INDIVIDUAL CASE STUDIES BELOW AS YOU PUBLISH ▼
+  ═══════════════════════════════════════════════════════════════════════
+       INDIVIDUAL CASE STUDIES — uncomment and fill in as you publish
+  ═══════════════════════════════════════════════════════════════════════
 
   <url>
     <loc>https://preemmedia.com/case-studies/startup-brand-launch.html</loc>
     <lastmod>YYYY-MM-DD</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
   </url>
 
   <url>
     <loc>https://preemmedia.com/case-studies/d2c-content-system.html</loc>
     <lastmod>YYYY-MM-DD</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
   </url>
 
   <url>
     <loc>https://preemmedia.com/case-studies/creator-personal-brand-transformation.html</loc>
     <lastmod>YYYY-MM-DD</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
   </url>
 
-  ▲ END CASE STUDIES ▲
-  ═══════════════════════════════════════════════════════════════ -->
+  END CASE STUDIES -->
+
 
 </urlset>
