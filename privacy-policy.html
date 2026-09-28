@@ -1,125 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme-color" content="#0b0b0b">
-
-  <!-- ── Primary SEO ── -->
-  <title>Privacy Policy | Preem Media — How We Handle Your Data</title>
-  <meta name="description" content="Preem Media's Privacy Policy explains how we collect, use, and protect your personal data when you visit our website or engage with our brand strategy and content marketing services.">
-  <link rel="canonical" href="https://preemmedia.com/privacy-policy.html">
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Privacy Policy | Preem Media">
-  <meta property="og:description" content="Learn how Preem Media collects, uses, and protects your personal information.">
-  <meta property="og:url" content="https://preemmedia.com/privacy-policy.html">
-  <meta property="og:site_name" content="Preem Media">
-
-  <!-- JSON-LD: WebPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Privacy Policy — Preem Media",
-    "url": "https://preemmedia.com/privacy-policy.html",
-    "description": "Preem Media's Privacy Policy detailing how we collect, use, and protect personal data.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Preem Media",
-      "url": "https://preemmedia.com"
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home",           "item": "https://preemmedia.com" },
-        { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://preemmedia.com/privacy-policy.html" }
-      ]
-    }
-  }
-  </script>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="privacy-policy.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0c0a" />
+    <meta
+      name="description"
+      content="Preem Media builds brands with intention. Brand strategy, identity, communications, AI discovery, social media and community, working as one."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      /* Resolve the theme before first paint so the palette never flashes.
+         Kept inline and tiny on purpose: a separate file would be a render
+         blocking request, and deferring it would show the wrong theme. */
+      (function () {
+        try {
+          var saved = localStorage.getItem('preem-theme');
+          var theme =
+            saved === 'light' || saved === 'dark'
+              ? saved
+              : window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', theme === 'light' ? '#f1f2ed' : '#0a0c0a');
+        } catch (error) {
+          /* No storage or no matchMedia: the stylesheet default still applies. */
+        }
+      })();
+    </script>
+    <title>Privacy Policy | Preem Media</title>
+    <script type="module" crossorigin src="/assets/index-BRjvUE5B.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-react-BZPdts19.js">
+    <link rel="modulepreload" crossorigin href="/assets/gsap-4q1Ho83e.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CmSGA2dD.css">
+  
+      <link rel="canonical" href="https://preemmedia.com/privacy-policy.html">
+      <meta property="og:title" content="Privacy Policy | Preem Media">
+      <meta property="og:description" content="Read the Preem Media privacy policy.">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="Preem Media">
+      <meta property="og:url" content="https://preemmedia.com/privacy-policy.html">
+      <meta name="twitter:card" content="summary_large_image">
+      <link rel="preload" href="/assets/archivo-latin-wght-normal-E0tuGl4L.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/jetbrains-mono-latin-wght-normal-B9CIFXIH.woff2" as="font" type="font/woff2" crossorigin>
+      <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Preem Media","url":"https://preemmedia.com","email":"info@preemmedia.com","sameAs":["https://www.linkedin.com/company/preemmedia"]}</script>
 </head>
+  <body>
+    <div id="root"><svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><symbol id="preem-mark" viewBox="0 0 1595 788"><path fill="currentColor" fill-rule="evenodd" transform="translate(80 80)" d="M 426.500 0.703 C 348.731 6.022, 260.718 35.955, 154.789 93.111 C 79.078 133.963, 33.809 170.898, 11.285 210.196 C -5.769 239.949, -2.188 268.118, 20 278.757 C 41.988 289.300, 90.149 282.214, 105.748 266.140 C 109.763 262.003, 110.282 261.085, 118.852 243 C 148.341 180.768, 238.792 120.363, 334.550 98.953 C 365.398 92.056, 400.494 88.177, 415.873 89.966 C 438.733 92.626, 442.837 105.151, 428.004 126.994 C 409.585 154.118, 351.308 196.977, 288.500 229.593 C 272.501 237.902, 252.044 247.378, 251.431 246.765 C 251.252 246.586, 255.078 234.303, 259.933 219.470 C 270.875 186.037, 272.374 179.559, 271.801 168.169 C 270.956 151.384, 262.214 143.316, 245.773 144.146 C 231.413 144.871, 216.775 155.433, 204.583 173.863 C 186.450 201.275, 115.953 340.334, 93.508 392.962 C 55.528 482.022, 43.693 548.117, 58.610 587.869 C 75.080 631.762, 124.281 640.928, 167.821 608.216 C 190.350 591.290, 201.118 566.471, 196.551 542 C 189.653 505.042, 189.710 505.530, 189.639 482 C 189.526 444.775, 195.318 410.845, 210.038 362.500 C 212.884 353.150, 215.620 344.099, 216.116 342.386 C 216.986 339.386, 218.028 338.881, 244.759 328.511 C 305.164 305.078, 314.180 301.498, 332.500 293.678 C 407.702 261.575, 490.490 210.617, 530.711 171.673 C 579.567 124.368, 593.366 82.531, 571.620 47.640 C 550.632 13.966, 495.113 -3.991, 426.500 0.703 M 1041.500 188.346 C 1016.672 196.568, 1003.929 219.218, 980.558 296.664 C 970.666 329.445, 953.045 361.282, 935.776 377.572 C 915.794 396.423, 886.895 416.406, 867.755 424.610 C 849.133 432.591, 826.809 434.976, 816.698 430.064 C 807.305 425.500, 803.490 416.109, 806.113 404.002 L 807.520 397.505 812.010 396.675 C 854.472 388.834, 884.257 376.417, 914.903 353.783 C 964.734 316.980, 987.902 260.546, 963.879 234.485 C 955.815 225.736, 944.906 222, 927.421 222 C 888.606 222, 841.179 244.231, 805.108 279.333 C 767.700 315.736, 741.565 348.243, 727.687 375.630 C 725.392 380.160, 723.707 381.612, 711.314 389.738 C 667.687 418.344, 628.898 434.219, 606.189 432.762 C 598.388 432.261, 595.451 430.826, 591.562 425.613 C 588.795 421.906, 588.819 409.748, 591.607 402.553 L 593.524 397.605 602.512 396.312 C 654.528 388.827, 711.613 356.856, 739.061 319.836 C 768.029 280.768, 766.875 237.780, 736.500 224.466 C 730.498 221.835, 710.141 221.292, 698.500 223.452 C 670.906 228.574, 636.489 245.806, 611.477 267.025 C 590.727 284.628, 566.987 312.515, 546.264 343.630 C 542.093 349.892, 538.510 354.844, 538.301 354.635 C 537.756 354.089, 542.265 342.392, 545.498 335.965 C 550.077 326.861, 558.230 315.094, 567.992 303.500 C 578.683 290.803, 583.454 284.024, 587.890 275.225 C 599.422 252.353, 593.938 229.420, 574.697 220.058 C 536.778 201.608, 476.697 238.601, 411.187 320.733 C 405.382 328.011, 400.503 333.837, 400.346 333.679 C 400.188 333.521, 401.391 330.119, 403.019 326.118 C 409.261 310.781, 409.153 300.660, 402.668 293.275 C 394.022 283.427, 376.363 282.551, 361.077 291.211 C 347.752 298.759, 339.417 308.989, 319.288 342.500 C 288.002 394.583, 262.182 442.266, 250.460 469.606 C 235.576 504.322, 238.213 529.082, 257.818 538.710 C 262.949 541.229, 264.526 541.500, 274.077 541.500 C 284.485 541.500, 284.787 541.434, 293.077 537.315 C 312.431 527.700, 321.785 516.340, 357.980 458.500 C 390.470 406.578, 407.833 384.378, 436.428 358.192 C 458.462 338.015, 488.616 318.216, 492.062 321.662 C 492.688 322.288, 492.628 326.330, 491.892 333.066 C 490.428 346.476, 491.245 370.248, 493.505 380 C 496.797 394.205, 503.368 405.050, 509.637 406.624 C 511.419 407.071, 511.939 407.706, 511.481 408.873 C 485.327 475.553, 519.999 524.039, 587.419 515.067 C 621.888 510.480, 669.885 488.536, 709.647 459.184 C 714.352 455.711, 718.304 453.011, 718.429 453.184 C 718.553 453.358, 719.182 457.022, 719.826 461.326 C 726.760 507.666, 772.395 526.357, 830.548 506.676 C 865.048 495.001, 906.047 470.172, 945.866 436.840 C 951.018 432.528, 955.518 429.001, 955.866 429.003 C 956.215 429.005, 956.524 435.642, 956.554 443.753 C 956.617 461.001, 958.373 467.194, 965.340 474.753 C 978.684 489.230, 999.866 487.621, 1017.590 470.785 C 1031.250 457.809, 1041.979 439.591, 1073.116 376.500 C 1096.345 329.431, 1103.187 318.144, 1107.044 320.527 C 1108.757 321.586, 1107.861 326.785, 1101.016 355.500 C 1084.699 423.954, 1083.383 445.172, 1094.769 456.267 C 1104.598 465.844, 1118.498 465.312, 1134.658 454.740 C 1150.748 444.213, 1182.542 413.886, 1240.567 353.720 C 1260.753 332.789, 1267 327.384, 1267 330.853 C 1267 331.322, 1263.389 337.877, 1258.975 345.420 C 1234.812 386.711, 1222.334 422.802, 1220.377 457.058 C 1218.876 483.336, 1228.457 504.178, 1246 512.798 C 1254.772 517.108, 1268.119 516.791, 1276.833 512.066 C 1289.628 505.129, 1296.485 493.554, 1311.824 453 C 1338.606 382.190, 1364.373 336.546, 1412.861 274.019 C 1432.182 249.103, 1434.445 245.004, 1434.403 235 C 1434.364 225.924, 1432.013 220.364, 1424.941 212.625 C 1415.544 202.344, 1404.679 198.488, 1385.500 198.627 C 1363.239 198.790, 1342.258 204.714, 1313.500 218.958 C 1273.725 238.658, 1238.859 264.470, 1198.750 303.910 C 1190.638 311.887, 1184 318.183, 1184 317.900 C 1184 317.618, 1185.808 312.748, 1188.017 307.079 C 1207.998 255.808, 1201.200 214.043, 1170.406 198.878 C 1161.420 194.453, 1149.155 194.052, 1139.641 197.872 C 1121.925 204.987, 1094.949 229.161, 1071.462 258.972 C 1067.908 263.483, 1065 266.979, 1065 266.741 C 1065 266.502, 1067.715 258.586, 1071.034 249.149 C 1080.344 222.675, 1081.329 219.114, 1081.310 211.997 C 1081.284 201.999, 1076.715 194.484, 1067.876 189.900 C 1062.484 187.103, 1047.856 186.241, 1041.500 188.346 M 683.265 282.570 C 669.644 289.577, 651.356 304.820, 639.545 319.011 C 631.006 329.271, 622.573 340.906, 623.213 341.546 C 624.062 342.395, 636.466 337.862, 645.333 333.462 C 666.752 322.834, 689.216 301.135, 695.192 285.301 C 697.873 278.200, 693.643 277.232, 683.265 282.570 M 890.500 282.335 C 877.988 288.406, 864.763 299.846, 851.350 316.200 C 845.541 323.283, 833.898 340.231, 834.457 340.791 C 835.041 341.374, 849.941 336.063, 855.307 333.359 C 869.251 326.331, 884.295 314.458, 892.712 303.837 C 908.586 283.807, 907.582 274.047, 890.500 282.335 M 826 534 C 824.127 535.873, 824 537.333, 824 557 C 824 576.667, 824.127 578.127, 826 580 C 828.950 582.950, 837.341 582.548, 841 579.283 C 841.275 579.037, 841.725 573.880, 842 567.822 L 842.500 556.807 847.366 567.654 C 853.354 581.001, 853.806 581.500, 859.882 581.500 C 866.318 581.500, 867.429 580.376, 873.576 567.647 L 878.818 556.793 879.159 567.849 C 879.553 580.617, 879.867 581.159, 887.226 581.769 C 896.820 582.564, 896.913 582.331, 897.134 557.089 C 897.361 531.125, 897.803 532, 884.454 532 C 872.243 532, 872.096 532.104, 866.543 544.661 C 863.907 550.623, 861.435 555.848, 861.051 556.274 C 860.666 556.700, 858.206 552.200, 855.583 546.274 C 849.349 532.187, 849.110 532, 837.389 532 C 829.333 532, 827.716 532.284, 826 534 M 945.223 533.557 C 943.041 535.085, 943 535.517, 943 557 C 943 584.433, 940.768 582.005, 965.973 581.985 C 987.920 581.968, 989.348 581.558, 989.811 575.153 C 990.306 568.316, 989.624 568, 974.378 568 L 961 568 961 565.500 L 961 563 973.465 563 C 987.244 563, 988 562.643, 988 556.137 C 988 550.735, 986.196 550, 972.929 550 C 961.667 550, 961 549.888, 961 548 C 961 546.104, 961.667 546, 973.845 546 C 988.419 546, 990 545.288, 990 538.728 C 990 532.468, 988.366 532, 966.500 532 C 950.872 532, 947.045 532.280, 945.223 533.557 M 1037 533.792 L 1034.500 535.823 1034.500 557.492 C 1034.500 577.788, 1034.623 579.251, 1036.441 580.581 C 1038.850 582.342, 1061.155 582.554, 1070.620 580.906 C 1097.849 576.164, 1102.586 544.563, 1077.500 535.013 C 1068.512 531.591, 1040.740 530.754, 1037 533.792 M 1137.500 533.195 C 1134.139 535.101, 1134.031 535.844, 1134.015 557.250 C 1133.997 581.465, 1134.187 582, 1142.777 582 C 1152.048 582, 1152 582.129, 1152 557 C 1152 535.517, 1151.959 535.085, 1149.777 533.557 C 1147.198 531.750, 1140.401 531.550, 1137.500 533.195 M 1215.087 533.208 C 1212.603 534.538, 1190.002 574.936, 1190.001 578.050 C 1189.999 580.867, 1192.328 582, 1198.118 582 C 1205.611 582, 1206.712 581.485, 1209.063 576.877 L 1211.041 573 1221.500 573 L 1231.959 573 1233.937 576.877 C 1236.246 581.402, 1237.438 582, 1244.148 582 C 1250.162 582, 1253 580.655, 1253 577.805 C 1253 575.316, 1233.650 537.408, 1230.929 534.567 C 1228.606 532.140, 1218.673 531.289, 1215.087 533.208 M 1052.216 556.750 L 1052.500 567.500 1058 567.822 C 1068.740 568.450, 1075 564.465, 1075 557 C 1075 549.590, 1069.383 546.017, 1057.716 546.006 L 1051.932 546 1052.216 556.750 M 1219.685 555.534 C 1217.479 560.160, 1217.399 560, 1221.926 560 L 1225.851 560 1224.176 556.010 C 1222.124 551.124, 1221.804 551.090, 1219.685 555.534"></path></symbol></svg><span id="top"></span><header class="header"><a class="wordmark" href="/" aria-label="Preem Media home"><svg class="logo " viewBox="0 0 1595 788" role="presentation" aria-hidden="true" focusable="false"><use href="#preem-mark"></use></svg></a><button class="theme-toggle push" aria-label="Switch colour theme"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 256 256" class="to-light"><path d="M116,36V20a12,12,0,0,1,24,0V36a12,12,0,0,1-24,0Zm80,92a68,68,0,1,1-68-68A68.07,68.07,0,0,1,196,128Zm-24,0a44,44,0,1,0-44,44A44.05,44.05,0,0,0,172,128ZM51.51,68.49a12,12,0,1,0,17-17l-12-12a12,12,0,0,0-17,17Zm0,119-12,12a12,12,0,0,0,17,17l12-12a12,12,0,1,0-17-17ZM196,72a12,12,0,0,0,8.49-3.51l12-12a12,12,0,0,0-17-17l-12,12A12,12,0,0,0,196,72Zm8.49,115.51a12,12,0,0,0-17,17l12,12a12,12,0,0,0,17-17ZM48,128a12,12,0,0,0-12-12H20a12,12,0,0,0,0,24H36A12,12,0,0,0,48,128Zm80,80a12,12,0,0,0-12,12v16a12,12,0,0,0,24,0V220A12,12,0,0,0,128,208Zm108-92H220a12,12,0,0,0,0,24h16a12,12,0,0,0,0-24Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 256 256" class="to-dark"><path d="M236.37,139.4a12,12,0,0,0-12-3A84.07,84.07,0,0,1,119.6,31.59a12,12,0,0,0-15-15A108.86,108.86,0,0,0,49.69,55.07,108,108,0,0,0,136,228a107.09,107.09,0,0,0,64.93-21.69,108.86,108.86,0,0,0,38.44-54.94A12,12,0,0,0,236.37,139.4Zm-49.88,47.74A84,84,0,0,1,68.86,69.51,84.93,84.93,0,0,1,92.27,48.29Q92,52.13,92,56A108.12,108.12,0,0,0,200,164q3.87,0,7.71-.27A84.79,84.79,0,0,1,186.49,187.14Z"></path></svg></button><a class="header-cta" href="/#contact">Start a project<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path></svg></a></header><main id="main-content" tabindex="-1" style="padding-top:68px"><section class="band shell" id="privacy"><div class="band-head"><h1 style="font-size:clamp(40px, 7vw, 110px);font-weight:800;text-transform:uppercase;letter-spacing:-0.05em;line-height:0.88">Privacy<br/><span class="accent">policy.</span></h1></div><div class="privacy-body">
 
-<body>
-
-  <!-- ══════════════════════════════════════════
-       HEADER
-  ══════════════════════════════════════════ -->
-  <header class="main-header" id="main-header">
-    <a href="index.html" class="logo">Preem Media<span class="logo-dot">.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <nav id="mainNav">
-      <a href="index.html"            class="btn-nav">About</a>
-      <a href="services-index.html"   class="btn-nav">Services</a>
-      <a href="blogs-index.html"      class="btn-nav">Blogs</a>
-      <a href="contact-index.html"    class="btn-nav">Contact</a>
-    </nav>
-  </header>
-
-  <!-- ══════════════════════════════════════════
-       MAIN
-  ══════════════════════════════════════════ -->
-  <main id="main-content">
-
-    <!-- ── Hero ── -->
-    <section class="privacy-hero" aria-labelledby="privacy-hero-heading">
-      <span class="privacy-hero-eyebrow">Legal &amp; Transparency</span>
-      <h1 id="privacy-hero-heading">Privacy Policy</h1>
-      <p class="privacy-hero-meta">Last updated: May 2026 &nbsp;·&nbsp; Effective: June 2026</p>
-    </section>
-
-    <!-- ── Document layout: TOC + Content ── -->
-    <section class="privacy-body" aria-label="Privacy Policy content">
-      <div class="privacy-layout">
-
-        <!-- ── Sticky Table of Contents ── -->
-        <aside class="privacy-toc-col" aria-label="Table of contents">
-          <nav class="privacy-toc">
-            <span class="privacy-toc-label">Contents</span>
-            <ol>
-              <li><a href="#who-we-are">Who We Are</a></li>
-              <li><a href="#information-we-collect">Information We Collect</a></li>
-              <li><a href="#how-we-use">How We Use Your Information</a></li>
-              <li><a href="#legal-basis">Legal Basis for Processing</a></li>
-              <li><a href="#sharing">How We Share Information</a></li>
-              <li><a href="#cookies">Cookies &amp; Tracking</a></li>
-              <li><a href="#data-retention">Data Retention</a></li>
-              <li><a href="#your-rights">Your Rights</a></li>
-              <li><a href="#third-party">Third-Party Links</a></li>
-              <li><a href="#children">Children's Privacy</a></li>
-              <li><a href="#changes">Changes to This Policy</a></li>
-              <li><a href="#contact-privacy">Contact Us</a></li>
-            </ol>
-          </nav>
-        </aside>
-
-        <!-- ── Main content column ── -->
-        <div class="privacy-main-col">
-
-          <!-- Intro card -->
+          
           <div class="privacy-intro-card">
             <p>
               At <strong>Preem Media</strong>, we take your privacy seriously. This Privacy Policy describes how we collect, use, disclose, and safeguard your personal information when you visit our website at <strong>preemmedia.com</strong>, interact with our content, or engage with us regarding our brand strategy and content marketing services. Please read this policy carefully. If you disagree with its terms, please discontinue use of our website.
             </p>
           </div>
 
-          <!-- ── Section 1: Who We Are ── -->
+          
           <div id="who-we-are" class="privacy-section">
-            <span class="privacy-section-number">01 — Identity</span>
+            
             <h2>Who We Are</h2>
             <p>
               Preem Media is a brand stewardship and content marketing agency that helps startups, D2C brands, and creators achieve category ownership through intentional design, AEO-optimised content, and digital storytelling.
@@ -129,9 +69,9 @@
             </p>
           </div>
 
-          <!-- ── Section 2: Information We Collect ── -->
+          
           <div id="information-we-collect" class="privacy-section">
-            <span class="privacy-section-number">02 — Data Collection</span>
+            
             <h2>Information We Collect</h2>
             <p>We collect information in the following ways:</p>
 
@@ -153,9 +93,9 @@
             <p>We do <strong>not</strong> collect sensitive personal data (such as health information, government IDs, or financial account details) through this website.</p>
           </div>
 
-          <!-- ── Section 3: How We Use Your Information ── -->
+          
           <div id="how-we-use" class="privacy-section">
-            <span class="privacy-section-number">03 — Purpose of Use</span>
+            
             <h2>How We Use Your Information</h2>
             <p>We use the personal information we collect for the following purposes:</p>
             <ul class="privacy-list">
@@ -172,9 +112,9 @@
             </div>
           </div>
 
-          <!-- ── Section 4: Legal Basis ── -->
+          
           <div id="legal-basis" class="privacy-section">
-            <span class="privacy-section-number">04 — Legal Basis</span>
+            
             <h2>Legal Basis for Processing</h2>
             <p>Where applicable data protection regulations (such as the GDPR or India's Digital Personal Data Protection Act 2023) require a legal basis for processing personal data, we rely on the following:</p>
             <ul class="privacy-list">
@@ -185,9 +125,9 @@
             </ul>
           </div>
 
-          <!-- ── Section 5: Sharing ── -->
+          
           <div id="sharing" class="privacy-section">
-            <span class="privacy-section-number">05 — Data Sharing</span>
+            
             <h2>How We Share Your Information</h2>
             <p>
               We do not share your personal information with third parties except in the limited circumstances described below:
@@ -203,9 +143,9 @@
             </p>
           </div>
 
-          <!-- ── Section 6: Cookies ── -->
+          
           <div id="cookies" class="privacy-section">
-            <span class="privacy-section-number">06 — Cookies &amp; Tracking</span>
+            
             <h2>Cookies &amp; Tracking Technologies</h2>
             <p>
               Our website may use cookies and similar tracking technologies to enhance your browsing experience and gather analytics about site usage. A cookie is a small text file stored on your device.
@@ -226,9 +166,9 @@
             </p>
           </div>
 
-          <!-- ── Section 7: Data Retention ── -->
+          
           <div id="data-retention" class="privacy-section">
-            <span class="privacy-section-number">07 — Retention</span>
+            
             <h2>Data Retention</h2>
             <p>
               We retain your personal data only for as long as necessary to fulfil the purposes described in this policy, or as required by law. Specifically:
@@ -244,9 +184,9 @@
             </p>
           </div>
 
-          <!-- ── Section 8: Your Rights ── -->
+          
           <div id="your-rights" class="privacy-section">
-            <span class="privacy-section-number">08 — Your Rights</span>
+            
             <h2>Your Rights</h2>
             <p>
               Depending on your location and applicable law, you may have the following rights regarding your personal data:
@@ -268,9 +208,9 @@
             </p>
           </div>
 
-          <!-- ── Section 9: Third-Party Links ── -->
+          
           <div id="third-party" class="privacy-section">
-            <span class="privacy-section-number">09 — External Links</span>
+            
             <h2>Third-Party Links</h2>
             <p>
               Our website may contain links to third-party websites, including our LinkedIn page, Calendly booking system, and other external resources. These sites operate under their own privacy policies, and we have no control over or responsibility for their content or data practices.
@@ -280,18 +220,18 @@
             </p>
           </div>
 
-          <!-- ── Section 10: Children's Privacy ── -->
+          
           <div id="children" class="privacy-section">
-            <span class="privacy-section-number">10 — Children</span>
+            
             <h2>Children's Privacy</h2>
             <p>
               Our website and services are directed at businesses and professionals aged 18 and above. We do not knowingly collect personal data from individuals under the age of 18. If you believe we have inadvertently collected data from a minor, please contact us immediately at <a href="mailto:info@preemmedia.com">info@preemmedia.com</a> and we will take prompt steps to delete it.
             </p>
           </div>
 
-          <!-- ── Section 11: Changes ── -->
+          
           <div id="changes" class="privacy-section">
-            <span class="privacy-section-number">11 — Updates</span>
+            
             <h2>Changes to This Policy</h2>
             <p>
               We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or for other operational reasons. When we make changes, we will update the "Last updated" date at the top of this page.
@@ -301,9 +241,9 @@
             </p>
           </div>
 
-          <!-- ── Section 12: Contact ── -->
+          
           <div id="contact-privacy" class="privacy-section">
-            <span class="privacy-section-number">12 — Contact</span>
+            
             <h2>Contact Us</h2>
             <p>If you have any questions, concerns, or requests relating to this Privacy Policy or our data practices, please get in touch:</p>
             <div class="privacy-contact-box">
@@ -315,120 +255,6 @@
             <p style="margin-top: 1.5rem;">
               We are committed to working with you to resolve any concerns about your privacy. If you are not satisfied with our response, you may have the right to contact your local data protection authority.
             </p>
-          </div>
-
-        </div><!-- end .privacy-main-col -->
-      </div><!-- end .privacy-layout -->
-    </section>
-
-  </main>
-
-
-  <!-- ══════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════ -->
-  <footer>
-    <div class="container footer-content">
-      <a href="privacy-policy.html" class="footer-privacy-link" aria-current="page">Privacy Policy</a>
-      <p class="footer-copy">© 2026 Preem Media. All rights reserved.</p>
-    </div>
-  </footer>
-
-
-  <script>
-    // ── Nav scroll effect ──
-    const header = document.getElementById('main-header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-
-    // ── Mobile nav toggle ──
-    const navToggle = document.getElementById('navToggle');
-    const mainNav   = document.getElementById('mainNav');
-    navToggle.addEventListener('click', () => {
-      const open = mainNav.classList.toggle('nav-open');
-      navToggle.setAttribute('aria-expanded', String(open));
-    });
-
-    // ── Close nav when a link is tapped ──
-    mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('nav-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // ── TOC active state on scroll ──
-    const tocLinks   = document.querySelectorAll('.privacy-toc a');
-    const privacySections = document.querySelectorAll('.privacy-section[id]');
-
-    const tocObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          tocLinks.forEach(l => l.removeAttribute('style'));
-          const active = document.querySelector(`.privacy-toc a[href="#${entry.target.id}"]`);
-          if (active) {
-            active.style.color = 'var(--color-accent)';
-            active.style.background = 'rgba(255,215,0,0.05)';
-          }
-        }
-      });
-    }, { threshold: 0.45, rootMargin: '-80px 0px -40% 0px' });
-
-    privacySections.forEach(s => tocObserver.observe(s));
-  
-    // ── Cookie Consent Banner ──
-    (function () {
-      const banner   = document.getElementById('cookieBanner');
-      const btnOk    = document.getElementById('cookieAccept');
-      const btnNo    = document.getElementById('cookieDecline');
-      const STORAGE_KEY = 'preem_cookie_consent';
-
-      function hideBanner () {
-        banner.classList.remove('cookie-visible');
-        setTimeout(() => { banner.style.display = 'none'; }, 500);
-      }
-
-      // Show only if consent not yet recorded
-      if (!localStorage.getItem(STORAGE_KEY)) {
-        setTimeout(() => { banner.classList.add('cookie-visible'); }, 800);
-      } else {
-        banner.style.display = 'none';
-      }
-
-      btnOk.addEventListener('click', () => {
-        localStorage.setItem(STORAGE_KEY, 'accepted');
-        hideBanner();
-      });
-
-      btnNo.addEventListener('click', () => {
-        localStorage.setItem(STORAGE_KEY, 'declined');
-        hideBanner();
-      });
-    })();
-
-  </script>
-
-
-  <!-- ══════════════════════════════════════════
-       COOKIE CONSENT BANNER
-  ══════════════════════════════════════════ -->
-  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-inner">
-      <div class="cookie-banner-text">
-        <p class="cookie-banner-title">We use cookies</p>
-        <p class="cookie-banner-desc">
-          We use cookies to enhance your browsing experience and analyse site traffic. 
-          Your data is handled in accordance with our 
-          <a href="privacy-policy.html#cookies">Cookie Policy</a>.
-        </p>
-      </div>
-      <div class="cookie-banner-actions">
-        <button class="cookie-btn cookie-btn--decline" id="cookieDecline" aria-label="Decline cookies">Decline</button>
-        <button class="cookie-btn cookie-btn--accept" id="cookieAccept" aria-label="Accept all cookies">Accept All</button>
-      </div>
-    </div>
-  </div>
-
-</body>
+          </div></div></section></main><footer class="footer"><div class="footer-bottom"><span class="mono">© <!-- -->2026<!-- --> Preem Media</span><a class="link" href="mailto:info@preemmedia.com">info@preemmedia.com<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path></svg></a></div></footer><svg class="grain" aria-hidden="true"><filter id="preem-grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#preem-grain)" opacity="0.5"></rect></svg><div class="scanline" aria-hidden="true"></div></div>
+  </body>
 </html>

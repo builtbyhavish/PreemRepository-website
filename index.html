@@ -1,320 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Primary SEO -->
-  <title>About Preem Media | Brand Strategy & Content Marketing Agency</title>
-  <meta name="description" content="Preem Media is a brand stewardship and content marketing agency helping startups, D2C brands, and creators achieve category ownership through intentional design, AEO-optimised content, and digital storytelling.">
-  <meta name="keywords" content="brand strategy agency, content marketing agency, social media marketing agency, brand management company, full-service digital agency, AEO agency, brand identity agency for startups, D2C brand agency, creator brand strategy">
-  <link rel="canonical" href="https://preemmedia.com/">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="About Preem Media | Brand Strategy & Content Marketing Agency">
-  <meta property="og:description" content="We don't chase keywords — we build brand entities. Preem Media fuses intentional design with AEO/GEO precision to make your brand the definitive answer in its category.">
-  <meta property="og:url" content="https://preemmedia.com/about-index.html">
-  <meta property="og:site_name" content="Preem Media">
-  <meta property="og:image" content="https://preemmedia.com/images/og-about.jpg">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About Preem Media | Brand Strategy & Content Marketing Agency">
-  <meta name="twitter:description" content="We don't chase keywords — we build brand entities. Intentional design meets AEO precision.">
-  <meta name="twitter:image" content="https://preemmedia.com/images/og-about.jpg">
-
-  <!-- Robots -->
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-
-  <!-- JSON-LD: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Preem Media",
-    "url": "https://preemmedia.com",
-    "logo": "https://preemmedia.com/images/logo.png",
-    "description": "Preem Media is a brand stewardship and content marketing agency that helps startups, D2C brands, and creators achieve category ownership through intentional design and AEO-optimised content strategy.",
-    "foundingDate": "2024",
-    "founder": {
-      "@type": "Person",
-      "name": "Havish",
-      "jobTitle": "Creative Director",
-      "description": "Creative Director who builds brands through emotion, clarity, and intention — blending creative direction, marketing strategy, and visual storytelling."
-    },
-    "serviceArea": {
-      "@type": "AdministrativeArea",
-      "name": "International — India, United States, United Kingdom, UAE"
-    },
-    "knowsAbout": [
-      "Brand Strategy",
-      "Content Marketing",
-      "Social Media Marketing",
-      "Brand Identity Design",
-      "AEO Optimisation",
-      "Community Management",
-      "D2C Brand Building",
-      "Startup Branding"
-    ],
-    "sameAs": [
-      "https://www.linkedin.com/company/preemmedia"
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD: WebPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "About Preem Media",
-    "url": "https://preemmedia.com/index.html",
-    "description": "Learn about Preem Media's origin, philosophy, and the founder behind the brand stewardship agency.",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://preemmedia.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "About",
-          "item": "https://preemmedia.com/about-index.html"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0c0a" />
+    <meta
+      name="description"
+      content="Preem Media builds brands with intention. Brand strategy, identity, communications, AI discovery, social media and community, working as one."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      /* Resolve the theme before first paint so the palette never flashes.
+         Kept inline and tiny on purpose: a separate file would be a render
+         blocking request, and deferring it would show the wrong theme. */
+      (function () {
+        try {
+          var saved = localStorage.getItem('preem-theme');
+          var theme =
+            saved === 'light' || saved === 'dark'
+              ? saved
+              : window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', theme === 'light' ? '#f1f2ed' : '#0a0c0a');
+        } catch (error) {
+          /* No storage or no matchMedia: the stylesheet default still applies. */
         }
-      ]
-    },
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Preem Media"
-    }
-  }
-  </script>
-
-  <!-- JSON-LD: FAQPage (AEO — surfaces in AI answer engines) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What does Preem Media do?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Preem Media is a brand stewardship and content marketing agency that helps startups, D2C brands, and creators achieve category ownership. We replace generic content with intentional creation — fusing AEO/GEO precision with futuristic brand identity design."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What makes Preem Media different from other marketing agencies?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Unlike conventional agencies that chase keywords, Preem Media builds brand entities. We bridge technical AEO and GEO optimisation with distinctive visual identity, ensuring your brand becomes the definitive answer when users or AI engines search for leaders in your category."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who does Preem Media work with?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Preem Media works with startups and early-stage founders, D2C and e-commerce brands, and creators and personal brands — primarily serving clients across India, the US, UK, and UAE."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="about.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+      })();
+    </script>
+    <title>Preem Media | Built for brands that deserve more.</title>
+    <script type="module" crossorigin src="/assets/index-BRjvUE5B.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-react-BZPdts19.js">
+    <link rel="modulepreload" crossorigin href="/assets/gsap-4q1Ho83e.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CmSGA2dD.css">
+  
+      <link rel="canonical" href="https://preemmedia.com/">
+      <meta property="og:title" content="Preem Media | Built for brands that deserve more.">
+      <meta property="og:description" content="Preem Media builds brands with intention. Brand strategy, identity, communications, AI discovery, social media and community, working as one.">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="Preem Media">
+      <meta property="og:url" content="https://preemmedia.com/">
+      <meta name="twitter:card" content="summary_large_image">
+      <link rel="preload" href="/assets/archivo-latin-wght-normal-E0tuGl4L.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/jetbrains-mono-latin-wght-normal-B9CIFXIH.woff2" as="font" type="font/woff2" crossorigin>
+      <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Preem Media","url":"https://preemmedia.com","email":"info@preemmedia.com","sameAs":["https://www.linkedin.com/company/preemmedia"]}</script>
 </head>
-
-<body>
-
-  <!-- ── HEADER ── -->
-   <header class="main-header" id="main-header">
-    <a href="index.html" class="logo">Preem Media<span class="logo-dot">.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <nav id="mainNav">
-      <a href="index.html"   class="btn-nav active">About</a>
-      <a href="services-index.html"     class="btn-nav">Services</a>
-      <a href="blogs-index.html#blogs"     class="btn-nav">Blogs</a>
-      <a href="contact-index.html"            class="btn-nav ">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Anchor nav (sticky, in-page) -->
-  <nav class="anchor-nav" aria-label="Page sections">
-    <div class="anchor-nav-inner">
-      <a href="#our-story" class="anchor-link active">Our Story</a>
-      <a href="#our-approach" class="anchor-link">Our Approach</a>
-      <a href="#founder" class="anchor-link">The Founder</a>
-    </div>
-  </nav>
-
-  <main id="main-content">
-
-    <!-- Hero -->
-    <section class="about-hero" aria-labelledby="about-hero-heading">
-      <div class="about-hero-content container">
-        <div class="about-hero-eyebrow">Preem Media</div>
-        <h1 id="about-hero-heading">Built for Brands<br><span class="text-accent">That Deserve More.</span></h1>
-        <p class="about-hero-sub"><strong>Intentional Creation | Thoughtful Branding | Sustainable Growth.</strong> </p>
-      </div>
-    </section>
-
-    <!-- Section 1: Our Story -->
-    <section id="our-story" class="about-section" aria-labelledby="story-heading">
-      <div class="container">
-        <div class="section-eyebrow">01 — Origin</div>
-        <h2 id="story-heading" class="section-heading">Why <span class="text-accent1">Preem Exists.</span></h2>
-        <div class="story-layout">
-          <div class="story-text">
-            <p class="section-intro">The internet became flooded with synthetic, low-intent content. 
-            <br> Brands were getting lost in a sea of AI-generated noise, invisible to new audience.</p>
-            <p class="section-intro">We built Preem Media to solve that <strong>discovery crisis</strong> 
-              . <br> It's not a goal, it's a standard we maintain.</p>
-            <p class="section-intro">Our work replaces generic content with <strong>intentional creation</strong> and brand stewardship, 
-              ensuring every brand we partner with earns a legacy of <strong>category ownership</strong>.</p>
-            <blockquote class="about-quote">
-              <p>"Your brand isnt just a rank. It should own the conversation."</p>
-            </blockquote>
-          </div>
-          <div class="story-image">
-            <img src="origin.png" alt="Preem Media — Brand Stewardship in action" class="story-img">
-            <p class="story-img-caption">It all started with an Intention</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 2: Our Approach -->
-    <section id="our-approach" class="about-section about-section--dark" aria-labelledby="approach-heading">
-      <div class="container">
-        <div class="section-eyebrow">02 — Philosophy</div>
-        <h2 id="approach-heading" class="section-heading">We Don't Chase <span class="text-accent2">Keywords.</span> We Build Them.</h2>
-        <p class="section-intro">Most agencies optimise for algorithms. We help build brands that algorithms are forced to respect. By fusing scroll stop visuals with a rigorous <strong>intentional design framework</strong>, we ensure your brand becomes the definitive answer bridging <strong>technical AEO/GEO precision</strong> with a living brand identity.</p>
-        <div class="pillars-grid" role="list">
-          <article class="pillar-card" role="listitem">
-            <div class="pillar-icon" aria-hidden="true">✦</div>
-            <h3>Brand Identity &amp; Positioning</h3>
-            <p>We help you define who you are before we tell anyone about it, Helping you building entity-level authority from the ground up.</p>
-          </article>
-          <article class="pillar-card" role="listitem">
-            <div class="pillar-icon" aria-hidden="true">◈</div>
-            <h3>Intentional Content Systems</h3>
-            <p>Every piece of content is a promotion with a story.<br>We build narration systems that compound authority over time, not just fill a calendar.</p>
-          </article>
-          <article class="pillar-card" role="listitem">
-            <div class="pillar-icon" aria-hidden="true">⬡</div>
-            <h3>AEO &amp; GEO Precision</h3>
-            <p>We optimise for how AI answer engines : 
-              <br> <strong>Perplexity</strong>, <strong>ChatGPT</strong>,<strong>Google SGE</strong>, to better discover and cite your brand as the only answer in your category.</p>
-          </article>
-          <article class="pillar-card" role="listitem">
-            <div class="pillar-icon" aria-hidden="true">◎</div>
-            <h3>Community &amp; Culture</h3>
-            <p>Category leaders don't just have loyal customers, they have communities.<br>
-               We build the culture layer around your brand.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3: The Founder -->
-    <section id="founder" class="about-section" aria-labelledby="founder-heading">
-      <div class="container">
-        <div class="section-eyebrow">03 — The Founder</div>
-        <div class="founder-layout">
-
-          <!-- Left: avatar -->
-          <div class="founder-visual" aria-hidden="true">
-            <div class="founder-glow"></div>
-            <img src="founder.png" alt="Havish — Creative Director, Preem Media" class="founder-avatar">
-            
-          </div>
-
-          <!-- Right: content -->
-          <div class="founder-content">
-            <p class="founder-greeting">Meet The Founder</p>
-            <h2 id="founder-heading">Hi, I am <span class="text-accent3">Havish.</span></h2>
-            <p class="founder-role">Creative Director </p>
-            <p class="founder-bio">My mission is to replace generic AI Slop and automated AI Marketing with <strong> Creative Direction,</strong> ensuring every movement we make builds an<br><strong> Identity</strong> that commands the algorithm.
-             <br><span class="founder-bio-logo">Preem Media</span> was founded on the belief that brands deserve more: more <strong> Intention</strong> ,more <strong> Imagination</strong> and more <strong> Soul.</strong></p>
-            <div class="founder-actions">
-              <a href="https://www.linkedin.com/in/havish-reddy-b898512b9" target="_blank" rel="noopener noreferrer" class="btn-cta founder-cta">Connect on LinkedIn</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="about-cta final-cta" aria-labelledby="cta-heading">
-      <div class="container text-center">
-        <h2 id="cta-heading">Ready to become the<br><span class="text-accent">definitive answer</span> in your category?</h2>
-        <a href="contact-index.html" target="_blank" rel="noopener noreferrer" class="btn-xl">GO PREEM</a>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ── FOOTER ── -->
-   <footer>
-    <div class="container footer-content">
-      <a href="privacy-policy.html" class="footer-privacy-link">Privacy Policy</a>
-      <p class="footer-copy">© 2026 Preem Media. All rights reserved.</p>
-    </div>
-  </footer>
-  <script>
-    // ── Nav scroll effect ──
-    const header = document.getElementById('main-header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-
-    // ── Mobile nav toggle ──
-    const navToggle = document.getElementById('navToggle');
-    const mainNav   = document.getElementById('mainNav');
-    navToggle.addEventListener('click', () => {
-      const open = mainNav.classList.toggle('nav-open');
-      navToggle.setAttribute('aria-expanded', String(open));
-    });
-
-    // ── Close nav when a link is tapped ──
-    mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('nav-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // ── Anchor nav active state on scroll ──
-    const anchorLinks = document.querySelectorAll('.anchor-link');
-    const sections = document.querySelectorAll('#our-story, #our-approach, #founder');
-
-    const anchorObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          anchorLinks.forEach(link => link.classList.remove('active'));
-          const active = document.querySelector(`.anchor-link[href="#${entry.target.id}"]`);
-          if (active) active.classList.add('active');
-        }
-      });
-    }, { threshold: 0.4 });
-
-    sections.forEach(s => anchorObserver.observe(s));
-  </script>
-</body>
+  <body>
+    <div id="root"><svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><symbol id="preem-mark" viewBox="0 0 1595 788"><path fill="currentColor" fill-rule="evenodd" transform="translate(80 80)" d="M 426.500 0.703 C 348.731 6.022, 260.718 35.955, 154.789 93.111 C 79.078 133.963, 33.809 170.898, 11.285 210.196 C -5.769 239.949, -2.188 268.118, 20 278.757 C 41.988 289.300, 90.149 282.214, 105.748 266.140 C 109.763 262.003, 110.282 261.085, 118.852 243 C 148.341 180.768, 238.792 120.363, 334.550 98.953 C 365.398 92.056, 400.494 88.177, 415.873 89.966 C 438.733 92.626, 442.837 105.151, 428.004 126.994 C 409.585 154.118, 351.308 196.977, 288.500 229.593 C 272.501 237.902, 252.044 247.378, 251.431 246.765 C 251.252 246.586, 255.078 234.303, 259.933 219.470 C 270.875 186.037, 272.374 179.559, 271.801 168.169 C 270.956 151.384, 262.214 143.316, 245.773 144.146 C 231.413 144.871, 216.775 155.433, 204.583 173.863 C 186.450 201.275, 115.953 340.334, 93.508 392.962 C 55.528 482.022, 43.693 548.117, 58.610 587.869 C 75.080 631.762, 124.281 640.928, 167.821 608.216 C 190.350 591.290, 201.118 566.471, 196.551 542 C 189.653 505.042, 189.710 505.530, 189.639 482 C 189.526 444.775, 195.318 410.845, 210.038 362.500 C 212.884 353.150, 215.620 344.099, 216.116 342.386 C 216.986 339.386, 218.028 338.881, 244.759 328.511 C 305.164 305.078, 314.180 301.498, 332.500 293.678 C 407.702 261.575, 490.490 210.617, 530.711 171.673 C 579.567 124.368, 593.366 82.531, 571.620 47.640 C 550.632 13.966, 495.113 -3.991, 426.500 0.703 M 1041.500 188.346 C 1016.672 196.568, 1003.929 219.218, 980.558 296.664 C 970.666 329.445, 953.045 361.282, 935.776 377.572 C 915.794 396.423, 886.895 416.406, 867.755 424.610 C 849.133 432.591, 826.809 434.976, 816.698 430.064 C 807.305 425.500, 803.490 416.109, 806.113 404.002 L 807.520 397.505 812.010 396.675 C 854.472 388.834, 884.257 376.417, 914.903 353.783 C 964.734 316.980, 987.902 260.546, 963.879 234.485 C 955.815 225.736, 944.906 222, 927.421 222 C 888.606 222, 841.179 244.231, 805.108 279.333 C 767.700 315.736, 741.565 348.243, 727.687 375.630 C 725.392 380.160, 723.707 381.612, 711.314 389.738 C 667.687 418.344, 628.898 434.219, 606.189 432.762 C 598.388 432.261, 595.451 430.826, 591.562 425.613 C 588.795 421.906, 588.819 409.748, 591.607 402.553 L 593.524 397.605 602.512 396.312 C 654.528 388.827, 711.613 356.856, 739.061 319.836 C 768.029 280.768, 766.875 237.780, 736.500 224.466 C 730.498 221.835, 710.141 221.292, 698.500 223.452 C 670.906 228.574, 636.489 245.806, 611.477 267.025 C 590.727 284.628, 566.987 312.515, 546.264 343.630 C 542.093 349.892, 538.510 354.844, 538.301 354.635 C 537.756 354.089, 542.265 342.392, 545.498 335.965 C 550.077 326.861, 558.230 315.094, 567.992 303.500 C 578.683 290.803, 583.454 284.024, 587.890 275.225 C 599.422 252.353, 593.938 229.420, 574.697 220.058 C 536.778 201.608, 476.697 238.601, 411.187 320.733 C 405.382 328.011, 400.503 333.837, 400.346 333.679 C 400.188 333.521, 401.391 330.119, 403.019 326.118 C 409.261 310.781, 409.153 300.660, 402.668 293.275 C 394.022 283.427, 376.363 282.551, 361.077 291.211 C 347.752 298.759, 339.417 308.989, 319.288 342.500 C 288.002 394.583, 262.182 442.266, 250.460 469.606 C 235.576 504.322, 238.213 529.082, 257.818 538.710 C 262.949 541.229, 264.526 541.500, 274.077 541.500 C 284.485 541.500, 284.787 541.434, 293.077 537.315 C 312.431 527.700, 321.785 516.340, 357.980 458.500 C 390.470 406.578, 407.833 384.378, 436.428 358.192 C 458.462 338.015, 488.616 318.216, 492.062 321.662 C 492.688 322.288, 492.628 326.330, 491.892 333.066 C 490.428 346.476, 491.245 370.248, 493.505 380 C 496.797 394.205, 503.368 405.050, 509.637 406.624 C 511.419 407.071, 511.939 407.706, 511.481 408.873 C 485.327 475.553, 519.999 524.039, 587.419 515.067 C 621.888 510.480, 669.885 488.536, 709.647 459.184 C 714.352 455.711, 718.304 453.011, 718.429 453.184 C 718.553 453.358, 719.182 457.022, 719.826 461.326 C 726.760 507.666, 772.395 526.357, 830.548 506.676 C 865.048 495.001, 906.047 470.172, 945.866 436.840 C 951.018 432.528, 955.518 429.001, 955.866 429.003 C 956.215 429.005, 956.524 435.642, 956.554 443.753 C 956.617 461.001, 958.373 467.194, 965.340 474.753 C 978.684 489.230, 999.866 487.621, 1017.590 470.785 C 1031.250 457.809, 1041.979 439.591, 1073.116 376.500 C 1096.345 329.431, 1103.187 318.144, 1107.044 320.527 C 1108.757 321.586, 1107.861 326.785, 1101.016 355.500 C 1084.699 423.954, 1083.383 445.172, 1094.769 456.267 C 1104.598 465.844, 1118.498 465.312, 1134.658 454.740 C 1150.748 444.213, 1182.542 413.886, 1240.567 353.720 C 1260.753 332.789, 1267 327.384, 1267 330.853 C 1267 331.322, 1263.389 337.877, 1258.975 345.420 C 1234.812 386.711, 1222.334 422.802, 1220.377 457.058 C 1218.876 483.336, 1228.457 504.178, 1246 512.798 C 1254.772 517.108, 1268.119 516.791, 1276.833 512.066 C 1289.628 505.129, 1296.485 493.554, 1311.824 453 C 1338.606 382.190, 1364.373 336.546, 1412.861 274.019 C 1432.182 249.103, 1434.445 245.004, 1434.403 235 C 1434.364 225.924, 1432.013 220.364, 1424.941 212.625 C 1415.544 202.344, 1404.679 198.488, 1385.500 198.627 C 1363.239 198.790, 1342.258 204.714, 1313.500 218.958 C 1273.725 238.658, 1238.859 264.470, 1198.750 303.910 C 1190.638 311.887, 1184 318.183, 1184 317.900 C 1184 317.618, 1185.808 312.748, 1188.017 307.079 C 1207.998 255.808, 1201.200 214.043, 1170.406 198.878 C 1161.420 194.453, 1149.155 194.052, 1139.641 197.872 C 1121.925 204.987, 1094.949 229.161, 1071.462 258.972 C 1067.908 263.483, 1065 266.979, 1065 266.741 C 1065 266.502, 1067.715 258.586, 1071.034 249.149 C 1080.344 222.675, 1081.329 219.114, 1081.310 211.997 C 1081.284 201.999, 1076.715 194.484, 1067.876 189.900 C 1062.484 187.103, 1047.856 186.241, 1041.500 188.346 M 683.265 282.570 C 669.644 289.577, 651.356 304.820, 639.545 319.011 C 631.006 329.271, 622.573 340.906, 623.213 341.546 C 624.062 342.395, 636.466 337.862, 645.333 333.462 C 666.752 322.834, 689.216 301.135, 695.192 285.301 C 697.873 278.200, 693.643 277.232, 683.265 282.570 M 890.500 282.335 C 877.988 288.406, 864.763 299.846, 851.350 316.200 C 845.541 323.283, 833.898 340.231, 834.457 340.791 C 835.041 341.374, 849.941 336.063, 855.307 333.359 C 869.251 326.331, 884.295 314.458, 892.712 303.837 C 908.586 283.807, 907.582 274.047, 890.500 282.335 M 826 534 C 824.127 535.873, 824 537.333, 824 557 C 824 576.667, 824.127 578.127, 826 580 C 828.950 582.950, 837.341 582.548, 841 579.283 C 841.275 579.037, 841.725 573.880, 842 567.822 L 842.500 556.807 847.366 567.654 C 853.354 581.001, 853.806 581.500, 859.882 581.500 C 866.318 581.500, 867.429 580.376, 873.576 567.647 L 878.818 556.793 879.159 567.849 C 879.553 580.617, 879.867 581.159, 887.226 581.769 C 896.820 582.564, 896.913 582.331, 897.134 557.089 C 897.361 531.125, 897.803 532, 884.454 532 C 872.243 532, 872.096 532.104, 866.543 544.661 C 863.907 550.623, 861.435 555.848, 861.051 556.274 C 860.666 556.700, 858.206 552.200, 855.583 546.274 C 849.349 532.187, 849.110 532, 837.389 532 C 829.333 532, 827.716 532.284, 826 534 M 945.223 533.557 C 943.041 535.085, 943 535.517, 943 557 C 943 584.433, 940.768 582.005, 965.973 581.985 C 987.920 581.968, 989.348 581.558, 989.811 575.153 C 990.306 568.316, 989.624 568, 974.378 568 L 961 568 961 565.500 L 961 563 973.465 563 C 987.244 563, 988 562.643, 988 556.137 C 988 550.735, 986.196 550, 972.929 550 C 961.667 550, 961 549.888, 961 548 C 961 546.104, 961.667 546, 973.845 546 C 988.419 546, 990 545.288, 990 538.728 C 990 532.468, 988.366 532, 966.500 532 C 950.872 532, 947.045 532.280, 945.223 533.557 M 1037 533.792 L 1034.500 535.823 1034.500 557.492 C 1034.500 577.788, 1034.623 579.251, 1036.441 580.581 C 1038.850 582.342, 1061.155 582.554, 1070.620 580.906 C 1097.849 576.164, 1102.586 544.563, 1077.500 535.013 C 1068.512 531.591, 1040.740 530.754, 1037 533.792 M 1137.500 533.195 C 1134.139 535.101, 1134.031 535.844, 1134.015 557.250 C 1133.997 581.465, 1134.187 582, 1142.777 582 C 1152.048 582, 1152 582.129, 1152 557 C 1152 535.517, 1151.959 535.085, 1149.777 533.557 C 1147.198 531.750, 1140.401 531.550, 1137.500 533.195 M 1215.087 533.208 C 1212.603 534.538, 1190.002 574.936, 1190.001 578.050 C 1189.999 580.867, 1192.328 582, 1198.118 582 C 1205.611 582, 1206.712 581.485, 1209.063 576.877 L 1211.041 573 1221.500 573 L 1231.959 573 1233.937 576.877 C 1236.246 581.402, 1237.438 582, 1244.148 582 C 1250.162 582, 1253 580.655, 1253 577.805 C 1253 575.316, 1233.650 537.408, 1230.929 534.567 C 1228.606 532.140, 1218.673 531.289, 1215.087 533.208 M 1052.216 556.750 L 1052.500 567.500 1058 567.822 C 1068.740 568.450, 1075 564.465, 1075 557 C 1075 549.590, 1069.383 546.017, 1057.716 546.006 L 1051.932 546 1052.216 556.750 M 1219.685 555.534 C 1217.479 560.160, 1217.399 560, 1221.926 560 L 1225.851 560 1224.176 556.010 C 1222.124 551.124, 1221.804 551.090, 1219.685 555.534"></path></symbol></svg><span id="top"></span><div class="preloader" aria-hidden="true"><div class="preloader-mark"><svg class="logo " viewBox="0 0 1595 788" role="presentation" aria-hidden="true" focusable="false"><use href="#preem-mark"></use></svg></div><div class="preloader-foot"><span class="mono">Intentional creation</span><span class="preloader-count" data-count="true">000</span></div><span class="preloader-bar"></span></div><a class="skip-link" href="#main-content">Skip to content</a><header class="header"><a class="wordmark" href="#top" aria-label="Preem Media, back to top"><svg class="logo " viewBox="0 0 1595 788" role="presentation" aria-hidden="true" focusable="false"><use href="#preem-mark"></use></svg></a><nav class="header-nav" aria-label="Sections"><span class="nav-ink" aria-hidden="true"></span><a href="#story">Story</a><a href="#services">Services</a><a href="#studio">Studio</a><a href="#founder">Founder</a><a href="#journal">Journal</a><a href="#contact">Contact</a></nav><button class="theme-toggle " aria-label="Switch colour theme"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 256 256" class="to-light"><path d="M116,36V20a12,12,0,0,1,24,0V36a12,12,0,0,1-24,0Zm80,92a68,68,0,1,1-68-68A68.07,68.07,0,0,1,196,128Zm-24,0a44,44,0,1,0-44,44A44.05,44.05,0,0,0,172,128ZM51.51,68.49a12,12,0,1,0,17-17l-12-12a12,12,0,0,0-17,17Zm0,119-12,12a12,12,0,0,0,17,17l12-12a12,12,0,1,0-17-17ZM196,72a12,12,0,0,0,8.49-3.51l12-12a12,12,0,0,0-17-17l-12,12A12,12,0,0,0,196,72Zm8.49,115.51a12,12,0,0,0-17,17l12,12a12,12,0,0,0,17-17ZM48,128a12,12,0,0,0-12-12H20a12,12,0,0,0,0,24H36A12,12,0,0,0,48,128Zm80,80a12,12,0,0,0-12,12v16a12,12,0,0,0,24,0V220A12,12,0,0,0,128,208Zm108-92H220a12,12,0,0,0,0,24h16a12,12,0,0,0,0-24Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 256 256" class="to-dark"><path d="M236.37,139.4a12,12,0,0,0-12-3A84.07,84.07,0,0,1,119.6,31.59a12,12,0,0,0-15-15A108.86,108.86,0,0,0,49.69,55.07,108,108,0,0,0,136,228a107.09,107.09,0,0,0,64.93-21.69,108.86,108.86,0,0,0,38.44-54.94A12,12,0,0,0,236.37,139.4Zm-49.88,47.74A84,84,0,0,1,68.86,69.51,84.93,84.93,0,0,1,92.27,48.29Q92,52.13,92,56A108.12,108.12,0,0,0,200,164q3.87,0,7.71-.27A84.79,84.79,0,0,1,186.49,187.14Z"></path></svg></button><a class="header-cta" href="#contact">Start a project<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path></svg></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg></button></header><span class="progress" aria-hidden="true"></span><main id="main-content" tabindex="-1"><section class="hero" id="hero" aria-labelledby="hero-title"><span class="hero-glow" aria-hidden="true"></span><div class="hero-canvas" aria-hidden="true"></div><div class="hero-body"><span class="mono hero-eyebrow eyebrow">Brand strategy and creative direction</span><h1 id="hero-title"><span class="hero-line"><span>Built for</span></span><span class="hero-line"><span><em>more</em>.</span></span></h1><div class="hero-support"><p>More intention. More imagination. More soul. For brands that refuse to blend in.</p><div class="hero-actions"><span class="magnetic " style="display:inline-flex"><a class="btn btn-solid" href="#contact">Start a project<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path></svg></a></span><a class="btn" href="#services">See the services<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path></svg></a></div></div></div></section><div class="marquee"><p class="visually-hidden">Services: <!-- -->Brand stewardship, SaaS branding, Brand communications, AEO &amp; GEO, Social media, Community<!-- -->.</p><div class="marquee-track"><div class="marquee-group" aria-hidden="true"><span class="marquee-item"><span class="marquee-word">Brand stewardship</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">SaaS branding</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">Brand communications</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">AEO &amp; GEO</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">Social media</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">Community</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span></div><div class="marquee-group" aria-hidden="true"><span class="marquee-item"><span class="marquee-word">Brand stewardship</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">SaaS branding</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">Brand communications</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">AEO &amp; GEO</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">Social media</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">Community</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span></div><div class="marquee-group" aria-hidden="true"><span class="marquee-item"><span class="marquee-word">Brand stewardship</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">SaaS branding</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">Brand communications</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">AEO &amp; GEO</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">Social media</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">Community</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span></div><div class="marquee-group" aria-hidden="true"><span class="marquee-item"><span class="marquee-word">Brand stewardship</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">SaaS branding</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">Brand communications</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">AEO &amp; GEO</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">Social media</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span><span class="marquee-item"><span class="marquee-word">Community</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></span></div></div></div><section class="band shell story" id="story" aria-labelledby="story-title"><div class="spine" aria-hidden="true"><svg viewBox="0 0 40 340" fill="none" preserveAspectRatio="xMidYMin meet"><path class="spine-track" d="M20 2 V96 L4 124 L20 152 V246 L36 274 L20 302 V338" stroke-width="1" stroke-linejoin="miter"></path><path class="spine-draw" d="M20 2 V96 L4 124 L20 152 V246 L36 274 L20 302 V338" stroke-width="2" stroke-linejoin="miter"></path><circle class="spine-head" cx="20" cy="2" r="3.5"></circle></svg></div><div class="story-copy"><h2 id="story-title" aria-label="In a world full of noise, we make brands worth paying attention to."><span class="story-word" aria-hidden="true">In<!-- --> </span><span class="story-word" aria-hidden="true">a<!-- --> </span><span class="story-word" aria-hidden="true">world<!-- --> </span><span class="story-word" aria-hidden="true">full<!-- --> </span><span class="story-word" aria-hidden="true">of<!-- --> </span><span class="story-word" aria-hidden="true">noise,<!-- --> </span><span class="story-word" aria-hidden="true">we<!-- --> </span><span class="story-word" aria-hidden="true">make<!-- --> </span><span class="story-word" aria-hidden="true">brands<!-- --> </span><span class="story-word" aria-hidden="true">worth<!-- --> </span><span class="story-word" aria-hidden="true">paying<!-- --> </span><span class="story-word" aria-hidden="true">attention<!-- --> </span><span class="story-word" aria-hidden="true">to.<!-- --> </span></h2><div class="story-detail"><p><strong>The internet doesn’t need more content.</strong> It needs more meaning. We bring strategy, design and storytelling together to help your brand own its place in the world.</p><p><strong>Strategy before creation.</strong> Every engagement begins with a strategy built for one brand only. Yours.</p><p><strong>Intention in every detail.</strong> Six interconnected services, working as one system rather than a list of deliverables.</p></div></div></section><section class="services" id="services" aria-labelledby="services-title"><div class="services-head"><span class="eyebrow" data-reveal="chars">What we do</span><h2 id="services-title" data-reveal="lines">Six services.<br/>One system.</h2></div><div class="pan"><div class="pan-track"><article class="panel" id="brand-stewardship"><div class="panel-index"><b>01</b><span class="mono">A brand worth believing in.</span></div><div class="slot slot-media" role="img" aria-label="The Preem wordmark drawn on its construction guides, with its palette and type gathering around it"><video muted="" loop="" playsInline="" preload="none" poster="/media/svc-01-stewardship-ink-still.jpg" aria-hidden="true"><source src="/media/svc-01-stewardship-ink.mp4" type="video/mp4"/><source src="/media/svc-01-stewardship-ink.webm" type="video/webm"/></video></div><div><h3>Brand stewardship</h3><p>Your identity, voice and story, built with intention and cared for as you grow. A living reputation, unmistakably yours.</p></div><ul class="panel-items"><li>Brand audit &amp; positioning</li><li>Visual identity &amp; guidelines</li><li>Voice &amp; messaging framework</li><li>Ongoing brand stewardship</li></ul></article><article class="panel" id="saas-branding"><div class="panel-index"><b>02</b><span class="mono">Complex product. Clear story.</span></div><div class="slot slot-media" role="img" aria-label="Scattered product feature labels settling into one clean landing page hero"><video muted="" loop="" playsInline="" preload="none" poster="/media/svc-02-saas-ink-still.jpg" aria-hidden="true"><source src="/media/svc-02-saas-ink.mp4" type="video/mp4"/><source src="/media/svc-02-saas-ink.webm" type="video/webm"/></video></div><div><h3>SaaS branding</h3><p>Turn the depth of your product into a clear, compelling brand narrative. Give your customers a reason to choose you before they compare features.</p></div><ul class="panel-items"><li>Product-led brand strategy</li><li>Category positioning</li><li>Landing page narrative</li><li>Investor &amp; go-to-market messaging</li></ul></article><article class="panel" id="brand-communications"><div class="panel-index"><b>03</b><span class="mono">Every word earns its place.</span></div><div class="slot slot-media" role="img" aria-label="A sentence edited down, filler struck out until only say what we mean remains"><video muted="" loop="" playsInline="" preload="none" poster="/media/svc-03-communications-ink-still.jpg" aria-hidden="true"><source src="/media/svc-03-communications-ink.mp4" type="video/mp4"/><source src="/media/svc-03-communications-ink.webm" type="video/webm"/></video></div><div><h3>Brand communications</h3><p>Make every touchpoint sound like you. From the first campaign to the next big launch, build a voice people recognise and a story they remember.</p></div><ul class="panel-items"><li>Brand voice &amp; tone</li><li>Campaign messaging &amp; copy</li><li>Email communication</li><li>Launch &amp; PR narratives</li></ul></article><article class="panel" id="aeo-geo"><div class="panel-index"><b>04</b><span class="mono">Be the answer they find.</span></div><div class="slot slot-media" role="img" aria-label="A question to an answer engine, an entity graph resolving, and your brand cited as the source"><video muted="" loop="" playsInline="" preload="none" poster="/media/svc-04-aeo-geo-ink-still.jpg" aria-hidden="true"><source src="/media/svc-04-aeo-geo-ink.mp4" type="video/mp4"/><source src="/media/svc-04-aeo-geo-ink.webm" type="video/webm"/></video></div><div><h3>AEO &amp; GEO</h3><p>Build for a new era of discovery. We strengthen your brand’s authority through structured content and entity optimisation for AI answer engines.</p></div><ul class="panel-items"><li>Entity-level optimisation</li><li>Structured data &amp; schema</li><li>AI-citation content strategy</li><li>Answer engine monitoring</li></ul></article><article class="panel" id="social-media"><div class="panel-index"><b>05</b><span class="mono">Make presence mean something.</span></div><div class="slot slot-media" role="img" aria-label="Nine posts publishing in sequence and reading as one grid"><video muted="" loop="" playsInline="" preload="none" poster="/media/svc-05-social-ink-still.jpg" aria-hidden="true"><source src="/media/svc-05-social-ink.mp4" type="video/mp4"/><source src="/media/svc-05-social-ink.webm" type="video/webm"/></video></div><div><h3>Social media</h3><p>Every post is a chapter in a bigger story. We build narrative-led content systems that create connection and compound brand equity.</p></div><ul class="panel-items"><li>Platform &amp; content strategy</li><li>Copywriting &amp; visual direction</li><li>Short-form video frameworks</li><li>Analytics &amp; optimisation</li></ul></article><article class="panel" id="community-management"><div class="panel-index"><b>06</b><span class="mono">From an audience to belonging.</span></div><div class="slot slot-media" role="img" aria-label="Scattered dots gathering into rings around the Preem asterisk"><video muted="" loop="" playsInline="" preload="none" poster="/media/svc-06-community-ink-still.jpg" aria-hidden="true"><source src="/media/svc-06-community-ink.mp4" type="video/mp4"/><source src="/media/svc-06-community-ink.webm" type="video/webm"/></video></div><div><h3>Community</h3><p>Build the culture around your brand. Bring people together through shared beliefs, meaningful engagement and a reason to keep coming back.</p></div><ul class="panel-items"><li>Community strategy &amp; setup</li><li>Engagement &amp; moderation</li><li>Culture &amp; exclusive content</li><li>Member growth &amp; retention</li></ul></article></div><div class="pan-rail" aria-hidden="true"><span class="mono pan-rail-count">01</span><span class="pan-rail-track"><span class="pan-rail-fill"></span></span><span class="mono">06</span></div></div></section><section class="band shell" id="studio" aria-labelledby="studio-title"><div class="band-head"><h2 id="studio-title" data-reveal="lines">A bigger picture.<br/>Every little detail.</h2></div><div class="studio-grid"><figure class="studio-cell" data-reveal="mask" style="--cols:4;--ar:16 / 10"><div class="slot slot-media" role="img" aria-label="One lime bar breaking rank from a field of identical bars"><video muted="" loop="" playsInline="" preload="none" poster="/media/studio-sculpture-ink-still.jpg" aria-hidden="true"><source src="/media/studio-sculpture-ink.mp4" type="video/mp4"/><source src="/media/studio-sculpture-ink.webm" type="video/webm"/></video></div><figcaption><span>Different by intention.</span><span class="mono">16:10</span></figcaption></figure><figure class="studio-cell" data-reveal="mask" style="--cols:2;--ar:3 / 4"><div class="slot slot-media" role="img" aria-label="A heartbeat line with the Preem wordmark beating in time"><video muted="" loop="" playsInline="" preload="none" poster="/media/studio-motion-ink-still.jpg" aria-hidden="true"><source src="/media/studio-motion-ink.mp4" type="video/mp4"/><source src="/media/studio-motion-ink.webm" type="video/webm"/></video></div><figcaption><span>A brand people feel.</span><span class="mono">3:4</span></figcaption></figure><figure class="studio-cell" data-reveal="mask" style="--cols:2;--ar:1 / 1"><div class="slot slot-media" role="img" aria-label="The letter P in Archivo moving through its full weight range"><video muted="" loop="" playsInline="" preload="none" poster="/media/studio-type-ink-still.jpg" aria-hidden="true"><source src="/media/studio-type-ink.mp4" type="video/mp4"/><source src="/media/studio-type-ink.webm" type="video/webm"/></video></div><figcaption><span>Every word earns its place.</span><span class="mono">1:1</span></figcaption></figure><figure class="studio-cell" data-reveal="mask" style="--cols:4;--ar:16 / 9"><div class="slot slot-media" role="img" aria-label="The four brand colours taking turns to carry the wordmark"><video muted="" loop="" playsInline="" preload="none" poster="/media/studio-palette-ink-still.jpg" aria-hidden="true"><source src="/media/studio-palette-ink.mp4" type="video/mp4"/><source src="/media/studio-palette-ink.webm" type="video/webm"/></video></div><figcaption><span>Built to be recognised.</span><span class="mono">16:9</span></figcaption></figure><figure class="studio-cell" data-reveal="mask" style="--cols:6;--ar:21 / 9"><div class="slot slot-media" role="img" aria-label="Six service nodes on one rail, joined into a single circuit"><video muted="" loop="" playsInline="" preload="none" poster="/media/studio-system-ink-still.jpg" aria-hidden="true"><source src="/media/studio-system-ink.mp4" type="video/mp4"/><source src="/media/studio-system-ink.webm" type="video/webm"/></video></div><figcaption><span>One system. Six services.</span><span class="mono">21:9</span></figcaption></figure></div><div class="studio-note reveal"><p class="mono">Thoughtful branding. Sustainable growth.</p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256" class="accent"><path d="M211.43,178.06a4,4,0,0,1-5.49,1.37L132,135.06V216a4,4,0,0,1-8,0V135.06L50.06,179.43a4,4,0,0,1-4.12-6.86L120.22,128,45.94,83.43a4,4,0,0,1,4.12-6.86L124,120.94V40a4,4,0,0,1,8,0v80.94l73.94-44.37a4,4,0,1,1,4.12,6.86L135.78,128l74.28,44.57A4,4,0,0,1,211.43,178.06Z"></path></svg></div></section><section class="band shell founder" id="founder" aria-labelledby="founder-title"><figure class="founder-portrait" data-reveal="mask"><div class="slot slot-media"><img src="/media/founder-portrait.webp" srcSet="/media/founder-portrait.webp 1200w, /media/founder-portrait@2x.webp 1600w" sizes="(max-width: 720px) 460px, 40vw" width="1200" height="1500" loading="lazy" decoding="async" alt="Havish Reddy, founder of Preem Media, leaning on a timber beam at night"/></div><figcaption><span class="mono">Havish Reddy</span><span class="mono">Founder and creative director</span></figcaption></figure><div class="founder-body"><h2 id="founder-title" data-reveal="lines">Human at heart.<br/><em>Intentional</em> by nature.</h2><p class="founder-quote" data-reveal="draw">Preem began with a simple belief: brands deserve more attention, more imagination and more soul.</p><p class="lede" data-reveal="lines">My mission is to bring creative direction back to the centre. To turn a brand’s identity into something people feel, remember and choose.</p><p class="lede" data-reveal="lines">We work with startups, D2C brands, SaaS companies and creators who are serious about owning their space.</p><div class="founder-links reveal"><a class="link" href="https://www.linkedin.com/in/havish-reddy-b898512b9" target="_blank" rel="noopener noreferrer">Meet Havish on LinkedIn<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path></svg></a></div></div></section><section class="band shell journal" id="journal" aria-labelledby="journal-title"><div class="band-head"><h2 id="journal-title" data-reveal="lines">On our minds.</h2><p class="lede" style="margin-top:20px" data-reveal="lines">Our first collection of insights is on its way.</p></div><div class="journal-rows"><article class="journal-row" data-reveal="draw"><span class="mono">01</span><h3 class="journal-title">Why most brands fail the discovery test</h3><p class="journal-excerpt">AI answer engines are the new gatekeepers. What does it take to become the brand they cite?</p><span class="journal-status mono">Brand strategy<b class="accent">Coming soon</b></span></article><article class="journal-row" data-reveal="draw"><span class="mono">02</span><h3 class="journal-title">What is AEO, and why does your brand need it?</h3><p class="journal-excerpt">A new way to think about how your brand gets found.</p><span class="journal-status mono">AEO / GEO<b class="accent">Coming soon</b></span></article><article class="journal-row" data-reveal="draw"><span class="mono">03</span><h3 class="journal-title">Build authority. Not just a content calendar.</h3><p class="journal-excerpt">How intentional narration systems compound brand authority over time.</p><span class="journal-status mono">Content marketing<b class="accent">Coming soon</b></span></article><article class="journal-row" data-reveal="draw"><span class="mono">04</span><h3 class="journal-title">Own your category. Without the big budget.</h3><p class="journal-excerpt">Clarity and a consistent identity can make your brand unmistakable.</p><span class="journal-status mono">D2C brands<b class="accent">Coming soon</b></span></article><article class="journal-row" data-reveal="draw"><span class="mono">05</span><h3 class="journal-title">A social presence that makes sense</h3><p class="journal-excerpt">Why activity alone cannot build lasting brand equity.</p><span class="journal-status mono">Social media<b class="accent">Coming soon</b></span></article><article class="journal-row" data-reveal="draw"><span class="mono">06</span><h3 class="journal-title">Entity vs keyword: the mindset shift</h3><p class="journal-excerpt">The distinction that changes how you build for discovery.</p><span class="journal-status mono">Brand strategy<b class="accent">Coming soon</b></span></article><article class="journal-row" data-reveal="draw"><span class="mono">07</span><h3 class="journal-title">Content that AI engines can cite</h3><p class="journal-excerpt">The content architecture behind a discoverable brand.</p><span class="journal-status mono">AEO / GEO<b class="accent">Coming soon</b></span></article></div></section><section class="band shell contact" id="contact" aria-labelledby="contact-title"><div class="contact-side"><span class="eyebrow" data-reveal="chars">Let’s build something that matters</span><h2 id="contact-title" data-reveal="lines">Tell us what<br/>you’re building.</h2><a class="contact-email reveal" href="mailto:info@preemmedia.com">info@preemmedia.com<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path></svg></a><div class="contact-call"><p class="mono">Better over a call?</p><span class="magnetic " style="display:inline-flex"><a class="btn" href="https://calendly.com/preemmedia-info/30min" target="_blank" rel="noopener noreferrer">Book a discovery call<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path></svg></a></span></div></div><form class="form" data-reveal="stagger" id="contactForm" aria-busy="false" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a71611c7-3c4d-46c8-aeee-a296f03c51aa"/><div class="field"><label for="name">Your name <i aria-hidden="true">*</i></label><input id="name" autoComplete="name" placeholder="Your name" required="" maxLength="150" name="name"/></div><div class="field"><label for="email">Email address <i aria-hidden="true">*</i></label><input id="email" type="email" autoComplete="email" placeholder="you@yourbrand.com" required="" maxLength="254" name="email"/></div><div class="field"><label for="brand">Your brand or project</label><input id="brand" autoComplete="organization" placeholder="What are you building?" maxLength="250" name="brand"/></div><div class="field"><label for="message">Tell us more <i aria-hidden="true">*</i></label><textarea id="message" name="message" rows="4" placeholder="The idea, the ambition, the challenge..." required="" maxLength="6000"></textarea></div><input class="honeypot" type="checkbox" tabindex="-1" autoComplete="off" aria-hidden="true" name="botcheck"/><div class="form-foot"><p class="mono">Your details are handled under our <a href="/privacy-policy.html">privacy policy</a>.</p><button class="btn btn-solid" type="submit"><span class="btn-label"><span>Send message</span></span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path></svg></button></div><div aria-live="polite"></div></form></section></main><footer class="footer"><h2 class="footer-link"><span class="footer-line" data-reveal="lines">Let’s make</span><br/><span class="footer-line" data-reveal="lines">it <em>Preem</em>.</span><span class="magnetic " style="display:inline-flex"><a class="footer-arrow" href="#contact" aria-label="Start a project"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256"><path d="M196,64V168a4,4,0,0,1-8,0V73.66L66.83,194.83a4,4,0,0,1-5.66-5.66L182.34,68H88a4,4,0,0,1,0-8H192A4,4,0,0,1,196,64Z"></path></svg></a></span></h2><div class="footer-grid" data-reveal="stagger"><div class="footer-col"><span class="mono">Contact</span><a href="mailto:info@preemmedia.com">info@preemmedia.com</a><a href="https://www.linkedin.com/company/preemmedia" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://calendly.com/preemmedia-info/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a></div><div class="footer-col"><span class="mono">Services</span><a href="#brand-stewardship">Brand stewardship</a><a href="#saas-branding">SaaS branding</a><a href="#brand-communications">Brand communications</a><a href="#aeo-geo">AEO &amp; GEO</a><a href="#social-media">Social media</a><a href="#community-management">Community</a></div><div class="footer-col"><span class="mono">This page</span><a href="#story">Story</a><a href="#services">Services</a><a href="#studio">Studio</a><a href="#founder">Founder</a><a href="#journal">Journal</a><a href="#contact">Contact</a></div><div class="footer-col"><span class="mono">Legal</span><a href="/privacy-policy.html">Privacy policy</a></div></div><a class="footer-mark" href="#top" aria-label="Preem Media, back to top" data-reveal="mask"><svg class="logo " viewBox="0 0 1595 788" role="presentation" aria-hidden="true" focusable="false"><use href="#preem-mark"></use></svg></a><div class="footer-bottom"><span class="mono">Brand strategy and creative direction</span><span class="mono">© <!-- -->2026<!-- --> Preem Media</span><a class="link" href="#top">Back to top<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path></svg></a></div></footer><svg class="grain" aria-hidden="true"><filter id="preem-grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#preem-grain)" opacity="0.5"></rect></svg><div class="scanline" aria-hidden="true"></div></div>
+  </body>
 </html>
